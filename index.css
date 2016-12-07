@@ -1,0 +1,49 @@
+  #colorful-text{
+    color: white;
+  }
+
+  body{
+    background: black;
+  }
+  body *{
+    box-sizing: border-box;
+  }
+
+  #controls {
+    border: 2px dotted white;
+    display: none;
+    max-width: 600px;
+    margin: 20px auto;
+    overflow: hidden;
+  }
+
+  #controls form input{
+    width: 100%;
+    text-align: center;
+  }
+
+  #controls *{
+    font-size: 20px;
+  }
+
+  #controls #output-html-wrapper {
+    display: flex;
+  }
+  #controls #output-html-wrapper label{
+    min-width: 125px;
+  }
+  #controls #output-html-wrapper p {
+    margin: 0 auto;
+    flex: 1;
+  }
+
+  #controls *:not([type='textbox']) {
+    color: white;
+  }
+
+  #colorful-text {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 200px;
+    margin-top: 20px;
+  }

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+
+  <div id="colorful-text" data-id='colorful-text'>Type Message Here</div>
+
+  <div data-id='controls' id='controls'>
+    <form>
+      <input type='textbox' focus placeholder='Type Message Here'>
+    </form>
+
+    <div id='output-html-wrapper'>
+      <label for='output-html'> Message URL: </label>
+
+      <p id='output-html' data-id='output-html'></p>
+    </div>
+
+    <p>Use -> <a href='https://bitly.com/'>bitly.com</a> <- to shorten url and disguise message that will be displayed</p>
+  </div>
+
+  <script>
+
+    window.onload = function() {
+
+      function updateURIQuery(message){
+        if(message === ''){
+          document.querySelector("[data-id='output-html']").innerHTML = ''
+        }
+        else{
+          document.querySelector("[data-id='output-html']").innerHTML = document.location + '?message=' + encodeURI(message);
+        }
+      }
+      function updateText(message) {
+        if(message === ''){
+          message = 'Type Message Here';
+        }
+        document.querySelector("[data-id='colorful-text']").innerHTML = message;
+      }
+
+      // update text if user types in the textbox
+      $textbox = document.querySelector("[data-id='controls'] [type='textbox']");
+      $textbox.addEventListener('input', function(e){
+        updateText(this.value);
+        updateURIQuery( this.value );
+      });
+
+      // make page display text
+      if(document.location.search === '') {
+        document.querySelector("[data-id='controls']").style.display = 'block';
+      }
+      else
+      {
+        var message = decodeURI(document.location.search.split('?message=')[1]);
+        console.log('message:', message)
+        updateText( message );
+      }
+
+      // color animation
+      var angle = 0;
+
+      var $text = document.querySelector("[data-id='colorful-text']");
+      function changeAngle() {
+        angle = (angle + 3) % 360;
+        $text.style.background = 'linear-gradient(' + angle + 'deg, red, orange, yellow, green, blue, indigo, violet, red, orange, yellow, green, blue, indigo, violet)';
+        $text.style.WebkitBackgroundClip = 'text';
+        $text.style.WebkitTextFillColor = 'transparent'
+      }
+
+      setInterval(changeAngle, 50);
+    };
+  </script>
+
+  </body>
+</html>
