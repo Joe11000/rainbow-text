@@ -5,15 +5,32 @@
 </head>
 <body>
 
-  <div id="colorful-text" data-id='colorful-text'>Type Message Here</div>
+  <div id="colorful-text" data-id='colorful-text'>
+    <pre>Type Message Here</pre>
+  </div>
 
   <div data-id='controls' id='controls'>
-    <form>
-      <input type='textbox' focus placeholder='Type Message Here'>
-    </form>
+    <textarea focus placeholder='Type Message Here'></textarea>
+
+    <div id='font-styles-wrapper'>
+      <div id='font-size-range-wrapper'>
+        <label for='font-size-range'>Font size:</label>
+        <input id='font-size-range' data-id='font-size-range' value='135' type='range' min='30' max='300'>
+      </div>
+
+      <select id='font-family-selector' data-id='font-family-selector' placeholder='Text Style'>
+        <option value='inherit' selected='selected'>Default</option>
+        <option value='Cursive'>Cursive</option>
+        <option value='Fantasy'>Fantasy</option>
+        <option value='-webkit-pictograph'>pictograph</option>
+        <option value='Monospace'>Monospace</option>
+        <option value='Serif'>Serif</option>
+        <option value='Sans-Serif'>Sans-Serif</option>
+      </select>
+    </div>
 
     <div id='output-html-wrapper'>
-      <label for='output-html'> Message URL: </label>
+      <label for='output-html'> Copy URL: </label>
 
       <p id='output-html' data-id='output-html'></p>
     </div>
@@ -25,51 +42,106 @@
 
     window.onload = function() {
 
-      function updateURIQuery(message){
+      function setURI(message, font_size=undefined, font_family=undefined){
         if(message === ''){
           document.querySelector("[data-id='output-html']").innerHTML = ''
         }
         else{
-          document.querySelector("[data-id='output-html']").innerHTML = document.location + '?message=' + encodeURI(message);
+          document.querySelector("[data-id='output-html']").innerHTML = document.location +
+            `?<wbr>font-size=${font_size}` + `<wbr>&font-family=${font_family}` + `<wbr>&message=${encodeURI(message)}`;
         }
       }
-      function updateText(message) {
+
+
+
+      function getText() {
+        return document.querySelector("[data-id='colorful-text'] pre").innerHTML
+      }
+      function setText(message) {
         if(message === ''){
           message = 'Type Message Here';
         }
-        document.querySelector("[data-id='colorful-text']").innerHTML = message;
+        document.querySelector("[data-id='colorful-text'] pre").innerHTML = message;
       }
 
-      // update text if user types in the textbox
-      $textbox = document.querySelector("[data-id='controls'] [type='textbox']");
-      $textbox.addEventListener('input', function(e){
-        updateText(this.value);
-        updateURIQuery( this.value );
-      });
+
+       // Attach Listeners
+      function addListenersForEditor(){
+        // update text if user types in the textbox
+        $textbox = document.querySelector("[data-id='controls'] textarea");
+        $textbox.addEventListener('input', function(e){
+          setText(this.value);
+          setURI( this.value, getTextSize(), getFontFamily() );
+        });
+
+        // font-size slider listener
+        document.querySelector("[data-id='font-size-range']").addEventListener('input', function(e){
+          setTextSize(this.value + 'px');
+          setURI( getText(), this.value + 'px', getFontFamily() );
+        });
+
+        // font-style listener
+        document.querySelector("[data-id='font-family-selector']").addEventListener('input', function(e){
+          setFontFamily(this.value);
+          setURI( getText(), getTextSize(), this.value );
+        });
+      }
+
+      function getTextSize(){
+        return document.querySelector("[data-id='font-size-range']").value + 'px';
+      }
+      function setTextSize(size){
+        document.querySelector("[data-id='colorful-text'] pre").style.fontSize = size;
+        // document.querySelector("[data-id='colorful-text'] pre").style.lineHeight = size;
+      }
+      function getFontFamily(style){
+        return document.querySelector("[data-id='font-family-selector']").value
+      }
+      function setFontFamily(style){
+        if(style === '' || style === []) { return; }
+
+        document.querySelector("[data-id='colorful-text'] pre").style.fontFamily = style;
+      }
+
 
       // make page display text
-      if(document.location.search === '') {
-        document.querySelector("[data-id='controls']").style.display = 'block';
-      }
-      else
-      {
-        var message = decodeURI(document.location.search.split('?message=')[1]);
-        console.log('message:', message)
-        updateText( message );
-      }
+        if(document.location.search === '') {
+          // show page specific
+          document.querySelector("[data-id='controls']").style.display = 'block';
+          addListenersForEditor();
+        }
+        else
+        {
+          // edit page specific
+          var uri = decodeURI(document.location.search);
+          var font_size = uri.match(/font-size=(\d*px)/)[1];
+          var font_family = uri.match(/font-family=(.*)&/)[1];
+          var message = decodeURI(document.location.search.match(/message=(.*)/)[1]);
 
-      // color animation
-      var angle = 0;
+          setText( message, font_size, font_family );
+          setTextSize(font_size)
+          setFontFamily(font_family)
+        }
 
-      var $text = document.querySelector("[data-id='colorful-text']");
-      function changeAngle() {
-        angle = (angle + 3) % 360;
-        $text.style.background = 'linear-gradient(' + angle + 'deg, red, orange, yellow, green, blue, indigo, violet, red, orange, yellow, green, blue, indigo, violet)';
-        $text.style.WebkitBackgroundClip = 'text';
-        $text.style.WebkitTextFillColor = 'transparent'
-      }
+      // color spinning animation
+        var angle = 0;
 
-      setInterval(changeAngle, 50);
+        var $text = document.querySelector("[data-id='colorful-text'] pre");
+        function changeAngle() {
+          angle = (angle + 3) % 360;
+          $text.style.background = 'linear-gradient(' + angle + 'deg, red, orange, yellow, green, blue, indigo, violet, red, orange, yellow, green, blue, indigo, violet)';
+          $text.style.WebkitBackgroundClip = 'text';
+          $text.style.WebkitTextFillColor = 'transparent'
+        }
+
+        window.startSpinning = function(){
+          window.rainbowIntervalID = setInterval(changeAngle, 50);
+        }
+        window.stopSpinning = function(){
+          clearInterval(window.rainbowIntervalID)
+        }
+        startSpinning();
+
     };
   </script>
 

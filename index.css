@@ -12,12 +12,13 @@
   #controls {
     border: 2px dotted white;
     display: none;
-    max-width: 600px;
+    max-width: 650px;
     margin: 20px auto;
     overflow: hidden;
+    padding: 5px;
   }
 
-  #controls form input{
+  #controls textarea{
     width: 100%;
     text-align: center;
   }
@@ -37,13 +38,31 @@
     flex: 1;
   }
 
-  #controls *:not([type='textbox']) {
+  #controls *:not(textarea):not(select) {
     color: white;
   }
 
-  #colorful-text {
+  #colorful-text{
     text-align: center;
-    font-weight: bolder;
-    font-size: 200px;
-    margin-top: 20px;
   }
+
+  #colorful-text pre{
+    font-size: 135px;
+    font-weight: bolder;
+    margin: 20px auto 40px;
+    overflow: visible;
+  }
+
+#controls #font-styles-wrapper{
+  display: flex;
+  margin: 10px auto;
+}
+
+#controls #font-styles-wrapper #font-size-range-wrapper{
+  flex: 1;
+  display: flex;
+}
+#controls #font-styles-wrapper #font-size-range-wrapper input[type='range']{
+  flex: 1;
+  margin: 0 10px;
+}
