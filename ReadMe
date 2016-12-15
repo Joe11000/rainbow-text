@@ -5,4 +5,4 @@ On the first visit, you can create a message to display to someone else using ra
 http://rainbow-text.herokuapp.com/index.html?font-size=118px&font-family=Fantasy&message=%F0%9F%90%BA%20%20%20TYT%20%20%20%F0%9F%90%BA%0AIs%0AToo%0A%F0%9F%90%BE%20%20Strong%20%20%F0%9F%90%BE%0A
 
 #sample Usage - Slytherin
-http://rainbow-text/index.html?font-size=162px&color_sequence=rgb(26,71,42),rgb(42,98,61),rgb(93,93,93),rgb(42,98,61),rgb(26,71,42),white,rgb(26,71,42),rgb(42,98,61),rgb(93,93,93),rgb(42,98,61),rgb(26,71,42),rgb(26,71,42),rgb(42,98,61),rgb(93,93,93),rgb(42,98,61),rgb(26,71,42)&font-family=Copperplate,%22Copperplate%20Gothic%20Light%22&message=Rachel%20Noonan%0A%F0%9F%90%8D%20-%2013%20-%20%F0%9F%90%8D%0ASlytherin
+http://rainbow-text.herokuapp.com/index.html?font-size=128px&color_sequence=rgb(26,71,42),rgb(42,98,61),rgb(93,93,93),rgb(42,98,61),rgb(26,71,42),white,rgb(26,71,42),rgb(42,98,61),rgb(93,93,93),rgb(42,98,61),rgb(26,71,42),rgb(26,71,42),rgb(42,98,61),rgb(93,93,93),rgb(42,98,61),rgb(26,71,42)&font-family=Copperplate,%22Copperplate%20Gothic%20Light%22&message=Rachel%20Noonan%0A%F0%9F%90%8D%20-%2013%20-%20%F0%9F%90%8D%0ASlytherin
