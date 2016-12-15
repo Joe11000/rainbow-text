@@ -19,12 +19,15 @@
       </div>
 
       <select id='font-family-selector' data-id='font-family-selector' placeholder='Text Style'>
-        <option value='inherit' selected='selected'>Default</option>
+        <!-- <option value='inherit' selected='selected'>Default</option> -->
+        <option value='Copperplate,"Copperplate Gothic Light"' selected='selected'>Copperplate</option>
         <option value='Cursive'>Cursive</option>
         <option value='Fantasy'>Fantasy</option>
+        <option value='Serif'>Serif</option>
+        <option value="Courier New">Courier New</option>
+        <option value='Brush Script MT'>Brush Script MT</option>
         <option value='-webkit-pictograph'>pictograph</option>
         <option value='Monospace'>Monospace</option>
-        <option value='Serif'>Serif</option>
         <option value='Sans-Serif'>Sans-Serif</option>
       </select>
     </div>
@@ -48,7 +51,7 @@
         }
         else{
           document.querySelector("[data-id='output-html']").innerHTML = document.location +
-            `?<wbr>font-size=${font_size}` + `<wbr>&font-family=${font_family}` + `<wbr>&message=${encodeURI(message)}`;
+            `?<wbr>font-size=${font_size}` + `<wbr>&font-family=${font_family.replace(/ /g, '%20')}` + `<wbr>&message=${encodeURI(message)}`;
         }
       }
 
@@ -94,7 +97,7 @@
         document.querySelector("[data-id='colorful-text'] pre").style.fontSize = size;
         // document.querySelector("[data-id='colorful-text'] pre").style.lineHeight = size;
       }
-      function getFontFamily(style){
+      function getFontFamily(){
         return document.querySelector("[data-id='font-family-selector']").value
       }
       function setFontFamily(style){
@@ -125,11 +128,15 @@
 
       // color spinning animation
         var angle = 0;
+        window.color_sequence = "red, orange, yellow, green, blue, indigo, red, orange, yellow, green, blue, indigo"
+        // "green, green, white, green, green, white, green, green, white, green, green, white"
+
 
         var $text = document.querySelector("[data-id='colorful-text'] pre");
+        $text.style.fontFamily = getFontFamily();
         function changeAngle() {
           angle = (angle + 3) % 360;
-          $text.style.background = 'linear-gradient(' + angle + 'deg, red, orange, yellow, green, blue, indigo, violet, red, orange, yellow, green, blue, indigo, violet)';
+          $text.style.background = 'linear-gradient(' + angle + 'deg,' + color_sequence + ')';
           $text.style.WebkitBackgroundClip = 'text';
           $text.style.WebkitTextFillColor = 'transparent'
         }
