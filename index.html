@@ -19,7 +19,6 @@
       </div>
 
       <select id='font-family-selector' data-id='font-family-selector' placeholder='Text Style'>
-        <!-- <option value='inherit' selected='selected'>Default</option> -->
         <option value='Copperplate,"Copperplate Gothic Light"' selected='selected'>Copperplate</option>
         <option value='Cursive'>Cursive</option>
         <option value='Fantasy'>Fantasy</option>
@@ -45,20 +44,31 @@
 
     window.onload = function() {
 
-      function setURI(message, font_size=undefined, font_family=undefined){
+      window.default_color_sequence = "red,orange,yellow,green,blue,indigo,red,orange,yellow,green,blue,indigo"
+
+      function getColors(){
+        return window.color_sequence.replace(/ /g, '');
+      }
+
+      function setURI(message, font_size=undefined, font_family=undefined, colors=window.default_color_sequence){
         if(message === ''){
-          document.querySelector("[data-id='output-html']").innerHTML = ''
+          document.querySelector("[data-id='output-html']").innerHTML = '';
         }
         else{
+
+          // only add a color string if color is not default
+          let color_sequence_for_uri = ''
+          if(colors != window.default_color_sequence){
+            color_sequence_for_uri = `<wbr>&color_sequence=${colors}`
+          }
+
           document.querySelector("[data-id='output-html']").innerHTML = document.location +
-            `?<wbr>font-size=${font_size}` + `<wbr>&font-family=${font_family.replace(/ /g, '%20')}` + `<wbr>&message=${encodeURI(message)}`;
+            `?<wbr>font-size=${font_size}` + color_sequence_for_uri + `<wbr>&font-family=${font_family.replace(/ /g, '%20')}` + `<wbr>&message=${encodeURI(message)}`;
         }
       }
 
-
-
       function getText() {
-        return document.querySelector("[data-id='colorful-text'] pre").innerHTML
+        return document.querySelector("[data-id='colorful-text'] pre").innerHTML;
       }
       function setText(message) {
         if(message === ''){
@@ -67,38 +77,36 @@
         document.querySelector("[data-id='colorful-text'] pre").innerHTML = message;
       }
 
-
        // Attach Listeners
       function addListenersForEditor(){
         // update text if user types in the textbox
         $textbox = document.querySelector("[data-id='controls'] textarea");
         $textbox.addEventListener('input', function(e){
           setText(this.value);
-          setURI( this.value, getTextSize(), getFontFamily() );
+          setURI( this.value, getFontSize(), getFontFamily(), getColors() );
         });
 
         // font-size slider listener
         document.querySelector("[data-id='font-size-range']").addEventListener('input', function(e){
           setTextSize(this.value + 'px');
-          setURI( getText(), this.value + 'px', getFontFamily() );
+          setURI( getText(), this.value + 'px', getFontFamily(), getColors() );
         });
 
         // font-style listener
         document.querySelector("[data-id='font-family-selector']").addEventListener('input', function(e){
           setFontFamily(this.value);
-          setURI( getText(), getTextSize(), this.value );
+          setURI( getText(), getFontSize(), this.value, getColors() );
         });
       }
 
-      function getTextSize(){
+      function getFontSize(){
         return document.querySelector("[data-id='font-size-range']").value + 'px';
       }
       function setTextSize(size){
         document.querySelector("[data-id='colorful-text'] pre").style.fontSize = size;
-        // document.querySelector("[data-id='colorful-text'] pre").style.lineHeight = size;
       }
       function getFontFamily(){
-        return document.querySelector("[data-id='font-family-selector']").value
+        return document.querySelector("[data-id='font-family-selector']").value;
       }
       function setFontFamily(style){
         if(style === '' || style === []) { return; }
@@ -106,20 +114,48 @@
         document.querySelector("[data-id='colorful-text'] pre").style.fontFamily = style;
       }
 
-
       // make page display text
         if(document.location.search === '') {
           // show page specific
           document.querySelector("[data-id='controls']").style.display = 'block';
           addListenersForEditor();
+          document.querySelector("[data-id='colorful-text'] pre").style.fontFamily = getFontFamily();
+          window.color_sequence = window.default_color_sequence;
         }
         else
         {
           // edit page specific
           var uri = decodeURI(document.location.search);
-          var font_size = uri.match(/font-size=(\d*px)/)[1];
-          var font_family = uri.match(/font-family=(.*)&/)[1];
-          var message = decodeURI(document.location.search.match(/message=(.*)/)[1]);
+
+          var font_size = '';
+          try{
+            font_size = uri.match(/font-size=([^&]*)/)[1];
+          }catch(e){
+            font_size = getFontSize();
+          }
+
+          // get font-family from url
+          var font_family = '';
+          try{
+            font_family = uri.match(/font-family=([^&]*)&/)[1];
+          }catch(e){
+            font_family = getFontFamily();
+          }
+
+          // get colors from url
+          try{
+            window.color_sequence = decodeURI(uri.match(/color_sequence=([^&]*)/)[1]);
+          }catch(e){
+            window.color_sequence = default_color_sequence;
+          }
+
+          // get colors from url
+          var message = '';
+          try{
+            message = decodeURI(document.location.search.match(/message=(.*)/)[1]);
+          }catch(e){
+            message = document.querySelector("textarea").getAttribute('placeholder');
+          }
 
           setText( message, font_size, font_family );
           setTextSize(font_size)
@@ -128,27 +164,20 @@
 
       // color spinning animation
         var angle = 0;
-        window.color_sequence = "red, orange, yellow, green, blue, indigo, red, orange, yellow, green, blue, indigo"
-        // "green, green, white, green, green, white, green, green, white, green, green, white"
-
-
         var $text = document.querySelector("[data-id='colorful-text'] pre");
-        $text.style.fontFamily = getFontFamily();
         function changeAngle() {
           angle = (angle + 3) % 360;
-          $text.style.background = 'linear-gradient(' + angle + 'deg,' + color_sequence + ')';
+          $text.style.background = 'linear-gradient(' + angle + 'deg,' + window.color_sequence + ')';
           $text.style.WebkitBackgroundClip = 'text';
-          $text.style.WebkitTextFillColor = 'transparent'
+          $text.style.WebkitTextFillColor = 'transparent';
         }
-
         window.startSpinning = function(){
           window.rainbowIntervalID = setInterval(changeAngle, 50);
         }
         window.stopSpinning = function(){
-          clearInterval(window.rainbowIntervalID)
+          clearInterval(window.rainbowIntervalID);
         }
         startSpinning();
-
     };
   </script>
 
