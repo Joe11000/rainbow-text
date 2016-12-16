@@ -12,11 +12,20 @@ http://rainbow-text.herokuapp.com/index.html?font-size=135px&color_sequence=rgb(
 
 
 
-
-
-
+#sample Usage - Griffindore
+&#129409;
 
 
 # update colors in terminal for the time being
 window.color_sequence = "rgb(26,71,42),rgb(42,98,61),rgb(93,93,93),rgb(42,98,61),rgb(26,71,42),white,rgb(26,71,42),rgb(42,98,61),rgb(93,93,93),rgb(42,98,61),rgb(26,71,42),rgb(26,71,42),rgb(42,98,61),rgb(93,93,93),rgb(42,98,61),rgb(26,71,42)"
 
+
+
+
+# Huff
+#eee117 (238,225,23)
+#e1b723 (225,183,35)
+#906200 (144,98,0)
+#1e1301 (30,19,1)
+#000000 (0,0,0)
+Facebook
