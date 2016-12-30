@@ -162,6 +162,3 @@ window.onload = function() {
     startSpinning();
 };
 
-
-
-// http://rainbow-text.herokuapp.com/index.html?edit=true&font-size=117px&font-family=Fantasy&message=%25F0%259F%2590%25BA%2520%2520%2520TYT%2520%2520%2520%25F0%259F%2590%25BA%250AIs%250AToo%250A%25F0%259F%2590%25BE%2520%2520Strong%2520%2520%25F0%259F%2590%25BE

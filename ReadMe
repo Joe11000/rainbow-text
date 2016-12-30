@@ -1,70 +1,69 @@
 # rainbow-text
 On the first visit, you can create a message to display to someone else using rainbow text. Copy the generated URI on the page and give it to someone else to open. You can disguise the message URI with bitly. (Link on page if you are creating a message)
 
-!!! ADD "edit=true" before the message='...' url parameter to edit a message after it has been created !!!
-
+New Feature: Add a url param "edit=true" before the message='...' param in the url to edit a message after it has been created !!!
 
 
 Sample Usage
-# TYT
-http://rainbow-text.herokuapp.com/index.html?font-size=118px&font-family=Fantasy&message=%25F0%259F%2590%25BA%2520%2520%2520TYT%2520%2520%2520%25F0%259F%2590%25BA%250AIs%250AToo%250A%25F0%259F%2590%25BE%2520%2520Strong%2520%2520%25F0%259F%2590%25BE%250A
+  # TYT
+  http://rainbow-text.herokuapp.com/index.html?font-size=118px&font-family=Fantasy&message=%25F0%259F%2590%25BA%2520%2520%2520TYT%2520%2520%2520%25F0%259F%2590%25BA%250AIs%250AToo%250A%25F0%259F%2590%25BE%2520%2520Strong%2520%2520%25F0%259F%2590%25BE%250A
 
-Sample editing existing message
-http://rainbow-text.herokuapp.com/index.html?font-size=118px&font-family=Fantasy&message=%25F0%259F%2590%25BA%2520%2520%2520TYT%2520%2520%2520%25F0%259F%2590%25BA%250AIs%250AToo%250A%25F0%259F%2590%25BE%2520%2520Strong%2520%2520%25F0%259F%2590%25BE
-
-
-# Gryffindor
- http://rainbow-text.herokuapp.com/index.html?font-size=173px&color_sequence=rgb(211%2C166%2C37)%2Crgb(116%2C0%2C1)%2Crgb(174%2C0%2C1)%2Crgb(238%2C186%2C48)%2Crgb(174%2C0%2C1)%2Crgb(116%2C0%2C1)%2Crgb(255%2C255%2C255)%2Crgb(116%2C0%2C1)%2Crgb(174%2C0%2C1)%2Crgb(238%2C186%2C48)%2Crgb(174%2C0%2C1)%2Crgb(116%2C0%2C1)%2Crgb(116%2C0%2C1)%2Crgb(174%2C0%2C1)%2Crgb(238%2C186%2C48)%2Crgb(174%2C0%2C1)%2Crgb(116%2C0%2C1)%2Crgb(211%2C166%2C37)&font-family=Copperplate,%22Copperplate%20Gothic%20Light%22&message=Joseph%2520Noonan%250A%25F0%259F%25A6%2581%2520-%252027%2520-%2520%25F0%259F%25A6%2581%250AGryffindor
-
-  # Gryffindor color insert
-  color_sequence = 'rgb(211,166,37),rgb(116,0,1),rgb(174,0,1),rgb(238,186,48),rgb(174,0,1),rgb(116,0,1),rgb(255,255,255),rgb(116,0,1),rgb(174,0,1),rgb(238,186,48),rgb(174,0,1),rgb(116,0,1),rgb(116,0,1),rgb(174,0,1),rgb(238,186,48),rgb(174,0,1),rgb(116,0,1),rgb(211,166,37)'
-
-  # Gryffindor colors
-  #740001 (116,0,1)
-  #ae0001 (174,0,1)
-  #eeba30 (238,186,48)
-  #d3a625 (211,166,37)
-  #000000 (0,0,0)
+  Sample editing existing message
+  http://rainbow-text.herokuapp.com/index.html?edit=true&font-size=118px&font-family=Fantasy&message=%25F0%259F%2590%25BA%2520%2520%2520TYT%2520%2520%2520%25F0%259F%2590%25BA%250AIs%250AToo%250A%25F0%259F%2590%25BE%2520%2520Strong%2520%2520%25F0%259F%2590%25BE
 
 
-# Slytherin
-  http://rainbow-text.herokuapp.com/index.html?edit=true&font-size=152px&color_sequence=rgb(26,71,42),rgb(42,98,61),rgb(93,93,93),rgb(42,98,61),rgb(26,71,42),rgb(255,255,255),rgb(26,71,42),rgb(42,98,61),rgb(93,93,93),rgb(42,98,61),rgb(26,71,42),rgb(26,71,42),rgb(42,98,61),rgb(93,93,93),rgb(42,98,61),rgb(26,71,42)&font-family=Fantasy&message=Joseph%20Noonan%0A%F0%9F%90%8D%20-%2027%20-%20%F0%9F%90%8D%0ASlytherin
+  # Gryffindor
+   http://rainbow-text.herokuapp.com/index.html?font-size=173px&color_sequence=rgb(211%2C166%2C37)%2Crgb(116%2C0%2C1)%2Crgb(174%2C0%2C1)%2Crgb(238%2C186%2C48)%2Crgb(174%2C0%2C1)%2Crgb(116%2C0%2C1)%2Crgb(255%2C255%2C255)%2Crgb(116%2C0%2C1)%2Crgb(174%2C0%2C1)%2Crgb(238%2C186%2C48)%2Crgb(174%2C0%2C1)%2Crgb(116%2C0%2C1)%2Crgb(116%2C0%2C1)%2Crgb(174%2C0%2C1)%2Crgb(238%2C186%2C48)%2Crgb(174%2C0%2C1)%2Crgb(116%2C0%2C1)%2Crgb(211%2C166%2C37)&font-family=Copperplate,%22Copperplate%20Gothic%20Light%22&message=Joseph%2520Noonan%250A%25F0%259F%25A6%2581%2520-%252027%2520-%2520%25F0%259F%25A6%2581%250AGryffindor
 
-  # Slytherin color insert
-  color_sequence = 'rgb(26,71,42),rgb(42,98,61),rgb(93,93,93),rgb(42,98,61),rgb(26,71,42),rgb(255,255,255),rgb(26,71,42),rgb(42,98,61),rgb(93,93,93),rgb(42,98,61),rgb(26,71,42),rgb(26,71,42),rgb(42,98,61),rgb(93,93,93),rgb(42,98,61),rgb(26,71,42)'
+    # Gryffindor color insert
+    color_sequence = 'rgb(211,166,37),rgb(116,0,1),rgb(174,0,1),rgb(238,186,48),rgb(174,0,1),rgb(116,0,1),rgb(255,255,255),rgb(116,0,1),rgb(174,0,1),rgb(238,186,48),rgb(174,0,1),rgb(116,0,1),rgb(116,0,1),rgb(174,0,1),rgb(238,186,48),rgb(174,0,1),rgb(116,0,1),rgb(211,166,37)'
 
-  # Slytherin colors
-  #1a472a (26,71,42)
-  #2a623d (42,98,61)
-  #5d5d5d (93,93,93)
-  #aaaaaa (170,170,170)
-  #000000 (0,0,0)
-
-
-# Ravenclaw
-  http://rainbow-text.herokuapp.com/index.html?font-size=150px&color_sequence=rgb(148,107,45),rgb(14,26,64),rgb(34,47,91)http://rainbow-text.herokuapp.com/index.html?edit=true&font-size=150px&color_sequence=rgb(148,107,45),rgb(14,26,64),rgb(34,47,91),rgb(93,93,93),rgb(34,47,91),rgb(14,26,64),rgb(255,255,255),rgb(14,26,64),rgb(34,47,91),rgb(93,93,93),rgb(34,47,91),rgb(14,26,64),rgb(14,26,64),rgb(34,47,91),rgb(93,93,93),rgb(34,47,91),rgb(14,26,64),rgb(148,107,45)&font-family=diploma_text&message=Joseph%20Noonan%0A%F0%9F%8E%93%20-%2027%20-%20%F0%9F%8E%93%0ARavenclaw
-
-  # Ravenclaw color insert
-  color_sequence = 'rgb(148,107,45),rgb(14,26,64),rgb(34,47,91),rgb(93,93,93),rgb(34,47,91),rgb(14,26,64),rgb(255,255,255),rgb(14,26,64),rgb(34,47,91),rgb(93,93,93),rgb(34,47,91),rgb(14,26,64),rgb(14,26,64),rgb(34,47,91),rgb(93,93,93),rgb(34,47,91),rgb(14,26,64),rgb(148,107,45)'
-
-  # Ravenclaw colors
-  #0e1a40 (14,26,64)
-  #222f5b (34,47,91)
-  #5d5d5d (238,186,48)
-  #946b2d (211,166,37)
-  #000000 (0,0,0)
+    # Gryffindor colors
+    #740001 (116,0,1)
+    #ae0001 (174,0,1)
+    #eeba30 (238,186,48)
+    #d3a625 (211,166,37)
+    #000000 (0,0,0)
 
 
-# Hufflepuff
-  http://rainbow-text.herokuapp.com/index.html?font-size=136px&color_sequence=rgb(30%2C19%2C1)%2Crgb(238%2C225%2C23)%2Crgb(225%2C183%2C35)%2Crgb(144%2C98%2C0)%2Crgb(225%2C183%2C35)%2Crgb(238%2C225%2C23)%2Crgb(255%2C255%2C255)%2Crgb(238%2C225%2C23)%2Crgb(225%2C183%2C35)%2Crgb(144%2C98%2C0)%2Crgb(225%2C183%2C35)%2Crgb(238%2C225%2C23)%2Crgb(238%2C225%2C23)%2Crgb(225%2C183%2C35)%2Crgb(144%2C98%2C0)%2Crgb(225%2C183%2C35)%2Crgb(238%2C225%2C23)%2Crgb(30%2C19%2C1)&font-family=Cursive&message=Joseph%2520Noonan%250A%25F0%259F%2590%2580%2520-%252027%2520-%2520%25F0%259F%2590%2580%250AHufflepuff
+  # Slytherin
+    http://rainbow-text.herokuapp.com/index.html?edit=true&font-size=152px&color_sequence=rgb(26,71,42),rgb(42,98,61),rgb(93,93,93),rgb(42,98,61),rgb(26,71,42),rgb(255,255,255),rgb(26,71,42),rgb(42,98,61),rgb(93,93,93),rgb(42,98,61),rgb(26,71,42),rgb(26,71,42),rgb(42,98,61),rgb(93,93,93),rgb(42,98,61),rgb(26,71,42)&font-family=Fantasy&message=Joseph%20Noonan%0A%F0%9F%90%8D%20-%2027%20-%20%F0%9F%90%8D%0ASlytherin
 
-  # Hufflepuff color insert
-  color_sequence = 'rgb(30,19,1),rgb(238,225,23),rgb(225,183,35),rgb(144,98,0),rgb(225,183,35),rgb(238,225,23),rgb(255,255,255),rgb(238,225,23),rgb(225,183,35),rgb(144,98,0),rgb(225,183,35),rgb(238,225,23),rgb(238,225,23),rgb(225,183,35),rgb(144,98,0),rgb(225,183,35),rgb(238,225,23),rgb(30,19,1)'
+    # Slytherin color insert
+    color_sequence = 'rgb(26,71,42),rgb(42,98,61),rgb(93,93,93),rgb(42,98,61),rgb(26,71,42),rgb(255,255,255),rgb(26,71,42),rgb(42,98,61),rgb(93,93,93),rgb(42,98,61),rgb(26,71,42),rgb(26,71,42),rgb(42,98,61),rgb(93,93,93),rgb(42,98,61),rgb(26,71,42)'
 
-  # Hufflepuff colors
-  #eee117 (238,225,23)
-  #e1b723 (225,183,35)
-  #906200 (144,98,0)
-  #1e1301 (30,19,1)
-  #000000 (0,0,0)
+    # Slytherin colors
+    #1a472a (26,71,42)
+    #2a623d (42,98,61)
+    #5d5d5d (93,93,93)
+    #aaaaaa (170,170,170)
+    #000000 (0,0,0)
+
+
+  # Ravenclaw
+    http://rainbow-text.herokuapp.com/index.html?font-size=150px&color_sequence=rgb(148,107,45),rgb(14,26,64),rgb(34,47,91)http://rainbow-text.herokuapp.com/index.html?edit=true&font-size=150px&color_sequence=rgb(148,107,45),rgb(14,26,64),rgb(34,47,91),rgb(93,93,93),rgb(34,47,91),rgb(14,26,64),rgb(255,255,255),rgb(14,26,64),rgb(34,47,91),rgb(93,93,93),rgb(34,47,91),rgb(14,26,64),rgb(14,26,64),rgb(34,47,91),rgb(93,93,93),rgb(34,47,91),rgb(14,26,64),rgb(148,107,45)&font-family=diploma_text&message=Joseph%20Noonan%0A%F0%9F%8E%93%20-%2027%20-%20%F0%9F%8E%93%0ARavenclaw
+
+    # Ravenclaw color insert
+    color_sequence = 'rgb(148,107,45),rgb(14,26,64),rgb(34,47,91),rgb(93,93,93),rgb(34,47,91),rgb(14,26,64),rgb(255,255,255),rgb(14,26,64),rgb(34,47,91),rgb(93,93,93),rgb(34,47,91),rgb(14,26,64),rgb(14,26,64),rgb(34,47,91),rgb(93,93,93),rgb(34,47,91),rgb(14,26,64),rgb(148,107,45)'
+
+    # Ravenclaw colors
+    #0e1a40 (14,26,64)
+    #222f5b (34,47,91)
+    #5d5d5d (238,186,48)
+    #946b2d (211,166,37)
+    #000000 (0,0,0)
+
+
+  # Hufflepuff
+    http://rainbow-text.herokuapp.com/index.html?font-size=136px&color_sequence=rgb(30%2C19%2C1)%2Crgb(238%2C225%2C23)%2Crgb(225%2C183%2C35)%2Crgb(144%2C98%2C0)%2Crgb(225%2C183%2C35)%2Crgb(238%2C225%2C23)%2Crgb(255%2C255%2C255)%2Crgb(238%2C225%2C23)%2Crgb(225%2C183%2C35)%2Crgb(144%2C98%2C0)%2Crgb(225%2C183%2C35)%2Crgb(238%2C225%2C23)%2Crgb(238%2C225%2C23)%2Crgb(225%2C183%2C35)%2Crgb(144%2C98%2C0)%2Crgb(225%2C183%2C35)%2Crgb(238%2C225%2C23)%2Crgb(30%2C19%2C1)&font-family=Cursive&message=Joseph%2520Noonan%250A%25F0%259F%2590%2580%2520-%252027%2520-%2520%25F0%259F%2590%2580%250AHufflepuff
+
+    # Hufflepuff color insert
+    color_sequence = 'rgb(30,19,1),rgb(238,225,23),rgb(225,183,35),rgb(144,98,0),rgb(225,183,35),rgb(238,225,23),rgb(255,255,255),rgb(238,225,23),rgb(225,183,35),rgb(144,98,0),rgb(225,183,35),rgb(238,225,23),rgb(238,225,23),rgb(225,183,35),rgb(144,98,0),rgb(225,183,35),rgb(238,225,23),rgb(30,19,1)'
+
+    # Hufflepuff colors
+    #eee117 (238,225,23)
+    #e1b723 (225,183,35)
+    #906200 (144,98,0)
+    #1e1301 (30,19,1)
+    #000000 (0,0,0)
 
