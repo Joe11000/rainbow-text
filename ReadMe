@@ -1,9 +1,16 @@
 # rainbow-text
 On the first visit, you can create a message to display to someone else using rainbow text. Copy the generated URI on the page and give it to someone else to open. You can disguise the message URI with bitly. (Link on page if you are creating a message)
 
+!!! ADD "edit=true" before the message='...' url parameter to edit a message after it has been created !!!
+
+
+
 Sample Usage
 # TYT
-http://rainbow-text.herokuapp.com/index.html?font-size=118px&font-family=Fantasy&message=%F0%9F%90%BA%20%20%20TYT%20%20%20%F0%9F%90%BA%0AIs%0AToo%0A%F0%9F%90%BE%20%20Strong%20%20%F0%9F%90%BE%0A
+http://rainbow-text.herokuapp.com/index.html?font-size=118px&font-family=Fantasy&message=%25F0%259F%2590%25BA%2520%2520%2520TYT%2520%2520%2520%25F0%259F%2590%25BA%250AIs%250AToo%250A%25F0%259F%2590%25BE%2520%2520Strong%2520%2520%25F0%259F%2590%25BE%250A
+
+Sample editing existing message
+http://rainbow-text.herokuapp.com/index.html?font-size=118px&font-family=Fantasy&message=%25F0%259F%2590%25BA%2520%2520%2520TYT%2520%2520%2520%25F0%259F%2590%25BA%250AIs%250AToo%250A%25F0%259F%2590%25BE%2520%2520Strong%2520%2520%25F0%259F%2590%25BE
 
 
 # Gryffindor

@@ -133,7 +133,7 @@ window.onload = function() {
         edit_existing = false;
       }
 
-      setURI( font_size, font_family, message, window.color_sequence );
+      setURI( message, font_size, font_family, window.color_sequence );
 
       // option 3: all parameters and url param "edit=true" ->
       if(edit_existing) // add default edit_existing
@@ -161,3 +161,7 @@ window.onload = function() {
     }
     startSpinning();
 };
+
+
+
+// http://rainbow-text.herokuapp.com/index.html?edit=true&font-size=117px&font-family=Fantasy&message=%25F0%259F%2590%25BA%2520%2520%2520TYT%2520%2520%2520%25F0%259F%2590%25BA%250AIs%250AToo%250A%25F0%259F%2590%25BE%2520%2520Strong%2520%2520%25F0%259F%2590%25BE
