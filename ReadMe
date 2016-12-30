@@ -8,7 +8,7 @@ Sample Usage
   # TYT
   http://rainbow-text.herokuapp.com/index.html?font-size=118px&font-family=Fantasy&message=%25F0%259F%2590%25BA%2520%2520%2520TYT%2520%2520%2520%25F0%259F%2590%25BA%250AIs%250AToo%250A%25F0%259F%2590%25BE%2520%2520Strong%2520%2520%25F0%259F%2590%25BE%250A
 
-  Sample editing existing message
+  # Edit TYT Message
   http://rainbow-text.herokuapp.com/index.html?edit=true&font-size=118px&font-family=Fantasy&message=%25F0%259F%2590%25BA%2520%2520%2520TYT%2520%2520%2520%25F0%259F%2590%25BA%250AIs%250AToo%250A%25F0%259F%2590%25BE%2520%2520Strong%2520%2520%25F0%259F%2590%25BE
 
 
