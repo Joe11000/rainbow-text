@@ -11,6 +11,28 @@ Sample Usage
   # Edit TYT Message
   http://rainbow-text.herokuapp.com/index.html?edit=true&font-size=118px&font-family=Fantasy&message=%25F0%259F%2590%25BA%2520%2520%2520TYT%2520%2520%2520%25F0%259F%2590%25BA%250AIs%250AToo%250A%25F0%259F%2590%25BE%2520%2520Strong%2520%2520%25F0%259F%2590%25BE
 
+  # Slytherpuff
+    http://rainbow-text.herokuapp.com/index.html?font-size=152px&color_sequence=rgb(26%2C71%2C42)%2Crgb(42%2C98%2C61)%2Crgb(93%2C93%2C93)%2Crgb(42%2C98%2C61)%2Crgb(26%2C71%2C42)%2Crgb(255%2C255%2C255)%2Crgb(26%2C71%2C42)%2Crgb(42%2C98%2C61)%2Crgb(93%2C93%2C93)%2Crgb(42%2C98%2C61)%2Crgb(26%2C71%2C42)%2Crgb(26%2C71%2C42)%2Crgb(42%2C98%2C61)%2Crgb(93%2C93%2C93)%2Crgb(42%2C98%2C61)%2Crgb(26%2C71%2C42)%2Crgb(30%2C19%2C1)%2Crgb(238%2C225%2C23)%2Crgb(225%2C183%2C35)%2Crgb(144%2C98%2C0)%2Crgb(225%2C183%2C35)%2Crgb(238%2C225%2C23)%2Crgb(255%2C255%2C255)%2Crgb(238%2C225%2C23)%2Crgb(225%2C183%2C35)%2Crgb(144%2C98%2C0)%2Crgb(225%2C183%2C35)%2Crgb(238%2C225%2C23)%2Crgb(238%2C225%2C23)%2Crgb(225%2C183%2C35)%2Crgb(144%2C98%2C0)%2Crgb(225%2C183%2C35)%2Crgb(238%2C225%2C23)%2Crgb(30%2C19%2C1)&font-family=Fantasy&message=Joseph%2520Noonan%250A%25F0%259F%2590%258D%2520-%252027%2520-%2520%25F0%259F%2590%2580%250ASlytherpuff
+
+    # Slytherpuff color insert
+      color_sequence = 'rgb(211,166,37),rgb(116,0,1),rgb(174,0,1),rgb(238,186,48),rgb(174,0,1),rgb(116,0,1),rgb(255,255,255),rgb(116,0,1),rgb(174,0,1),rgb(238,186,48),rgb(174,0,1),rgb(116,0,1),rgb(116,0,1),rgb(174,0,1),rgb(238,186,48),rgb(174,0,1),rgb(116,0,1),rgb(211,166,37)'
+
+    # Slytherpuff colors
+      # Slytherin colors
+        #1a472a (26,71,42)
+        #2a623d (42,98,61)
+        #5d5d5d (93,93,93)
+        #aaaaaa (170,170,170)
+        #000000 (0,0,0)
+
+      # Hufflepuff colors
+        #eee117 (238,225,23)
+        #e1b723 (225,183,35)
+        #906200 (144,98,0)
+        #1e1301 (30,19,1)
+        #000000 (0,0,0)
+
+
 
   # Gryffindor
    http://rainbow-text.herokuapp.com/index.html?font-size=173px&color_sequence=rgb(211%2C166%2C37)%2Crgb(116%2C0%2C1)%2Crgb(174%2C0%2C1)%2Crgb(238%2C186%2C48)%2Crgb(174%2C0%2C1)%2Crgb(116%2C0%2C1)%2Crgb(255%2C255%2C255)%2Crgb(116%2C0%2C1)%2Crgb(174%2C0%2C1)%2Crgb(238%2C186%2C48)%2Crgb(174%2C0%2C1)%2Crgb(116%2C0%2C1)%2Crgb(116%2C0%2C1)%2Crgb(174%2C0%2C1)%2Crgb(238%2C186%2C48)%2Crgb(174%2C0%2C1)%2Crgb(116%2C0%2C1)%2Crgb(211%2C166%2C37)&font-family=Copperplate,%22Copperplate%20Gothic%20Light%22&message=Joseph%2520Noonan%250A%25F0%259F%25A6%2581%2520-%252027%2520-%2520%25F0%259F%25A6%2581%250AGryffindor
