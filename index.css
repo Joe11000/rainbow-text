@@ -1,8 +1,55 @@
   @font-face {
-    font-family: 'diploma_text';
-    src: url('diploma.ttf');
+    font-family: 'bioshock';
+    src: url('fonts/bioshock.ttf');
   }
-
+  @font-face {
+    font-family: 'angel';
+    src: url('fonts/angel.otf');
+  }
+  @font-face {
+    font-family: 'billion_stars';
+    src: url('fonts/billion_stars.ttf');
+  }
+  @font-face {
+    font-family: 'billy_argel';
+    src: url('fonts/billy_argel.otf');
+  }
+  @font-face {
+    font-family: 'football';
+    src: url('fonts/football.tff');
+  }
+  @font-face {
+    font-family: 'cookie_monster';
+    src: url('fonts/cookie_monster.ttf');
+  }
+  @font-face {
+    font-family: 'diploma';
+    src: url('fonts/diploma.ttf');
+  }
+  @font-face {
+    font-family: 'disney';
+    src: url('fonts/disney.ttf');
+  }
+  @font-face {
+    font-family: 'mothman';
+    src: url('fonts/mothman.ttf');
+  }
+  @font-face {
+    font-family: 'mardian';
+    src: url('fonts/mardian.ttf');
+  }
+  @font-face {
+    font-family: 'mrb';
+    src: url('fonts/mrb.ttf');
+  }
+  @font-face {
+    font-family: 'respective';
+    src: url('fonts/respective.ttf');
+  }
+  @font-face {
+    font-family: 'xiomara_script';
+    src: url('fonts/xiomara_script.ttf');
+  }
 
   body{
     background: black;

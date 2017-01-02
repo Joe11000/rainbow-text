@@ -44,7 +44,7 @@ Sample Usage
 
 
   # Ravenclaw
-    http://rainbow-text.herokuapp.com/index.html?font-size=177px&color_sequence=rgb(148%2C107%2C45)%2Crgb(14%2C26%2C64)%2Crgb(34%2C47%2C91)%2Crgb(93%2C93%2C93)%2Crgb(34%2C47%2C91)%2Crgb(14%2C26%2C64)%2Crgb(255%2C255%2C255)%2Crgb(14%2C26%2C64)%2Crgb(34%2C47%2C91)%2Crgb(93%2C93%2C93)%2Crgb(34%2C47%2C91)%2Crgb(14%2C26%2C64)%2Crgb(14%2C26%2C64)%2Crgb(34%2C47%2C91)%2Crgb(93%2C93%2C93)%2Crgb(34%2C47%2C91)%2Crgb(14%2C26%2C64)%2Crgb(148%2C107%2C45)&font-family=diploma_text&message=Joseph%2520Noonan%250A%25F0%259F%258E%2593%2520-%252027%2520-%2520%25F0%259F%258E%2593%250ARavenclaw
+    http://rainbow-text.herokuapp.com/index.html?font-size=177px&color_sequence=rgb(148%2C107%2C45)%2Crgb(14%2C26%2C64)%2Crgb(34%2C47%2C91)%2Crgb(93%2C93%2C93)%2Crgb(34%2C47%2C91)%2Crgb(14%2C26%2C64)%2Crgb(255%2C255%2C255)%2Crgb(14%2C26%2C64)%2Crgb(34%2C47%2C91)%2Crgb(93%2C93%2C93)%2Crgb(34%2C47%2C91)%2Crgb(14%2C26%2C64)%2Crgb(14%2C26%2C64)%2Crgb(34%2C47%2C91)%2Crgb(93%2C93%2C93)%2Crgb(34%2C47%2C91)%2Crgb(14%2C26%2C64)%2Crgb(148%2C107%2C45)&font-family=diploma&message=Joseph%2520Noonan%250A%25F0%259F%258E%2593%2520-%252027%2520-%2520%25F0%259F%258E%2593%250ARavenclaw
 
     # Ravenclaw color insert
       color_sequence = 'rgb(148,107,45),rgb(14,26,64),rgb(34,47,91),rgb(93,93,93),rgb(34,47,91),rgb(14,26,64),rgb(255,255,255),rgb(14,26,64),rgb(34,47,91),rgb(93,93,93),rgb(34,47,91),rgb(14,26,64),rgb(14,26,64),rgb(34,47,91),rgb(93,93,93),rgb(34,47,91),rgb(14,26,64),rgb(148,107,45)'
