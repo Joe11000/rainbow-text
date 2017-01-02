@@ -15,8 +15,8 @@
     src: url('fonts/billy_argel.otf');
   }
   @font-face {
-    font-family: 'football';
-    src: url('fonts/football.tff');
+    font-family: 'collegiateHeavyOutline.ttf';
+    src: url('fonts/collegiateHeavyOutline.ttf.tff');
   }
   @font-face {
     font-family: 'cookie_monster';
@@ -45,6 +45,10 @@
   @font-face {
     font-family: 'respective';
     src: url('fonts/respective.ttf');
+  }
+  @font-face {
+    font-family: 'sport';
+    src: url('fonts/sport.ttf');
   }
   @font-face {
     font-family: 'xiomara_script';
