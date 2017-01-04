@@ -97,13 +97,17 @@
 
   #colorful-text{
     text-align: center;
+    padding: 10px;
   }
 
-  #colorful-text pre{
+  #colorful-text #colorful-text-black-box{
+    background: black;
+  }
+
+  #colorful-text #colorful-text-black-box pre{
     font-size: 135px;
-    margin: 20px auto 40px;
-    box-sizing: content-box;
-    border: 12px solid transparent;
+    margin: 0;
+    /*box-sizing: content-box;*/
   }
 
 #controls #font-styles-wrapper{

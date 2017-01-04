@@ -160,5 +160,15 @@ window.onload = function() {
       clearInterval(window.rainbowIntervalID);
     }
     startSpinning();
+
+
+
+    var angle2 = 0;
+    var $text2 = document.querySelector("[data-id='colorful-text']");
+function changeAngle2() {
+      angle2 = (angle2 + 3) % 360;
+      $text2.style.background = 'linear-gradient(' + angle2 + 'deg,' + window.color_sequence + ')';
+    }
+    setInterval(changeAngle2, 50)
 };
 
