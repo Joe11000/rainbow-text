@@ -107,7 +107,7 @@
   #colorful-text #colorful-text-black-box pre{
     font-size: 135px;
     margin: 0;
-    /*box-sizing: content-box;*/
+    line-height: 1.75em;
   }
 
 #controls #font-styles-wrapper{
