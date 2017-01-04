@@ -102,6 +102,7 @@
   #colorful-text pre{
     font-size: 135px;
     margin: 20px auto 40px;
+    line-height: 1.75em;
   }
 
 #controls #font-styles-wrapper{
