@@ -102,6 +102,8 @@
   #colorful-text pre{
     font-size: 135px;
     margin: 20px auto 40px;
+    box-sizing: content-box;
+    border: 12px solid transparent;
   }
 
 #controls #font-styles-wrapper{
