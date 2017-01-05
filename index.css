@@ -103,6 +103,12 @@
     font-size: 135px;
     margin: 20px auto 40px;
     line-height: 1.75em;
+    background-color: black;
+    border: 10px solid transparent;
+    border-image-slice: 1;
+    /*border-image-width: 1%;*/
+    /*border-image-outset: 114%;*/
+    border-image-repeat: stretch;
   }
 
 #controls #font-styles-wrapper{

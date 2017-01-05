@@ -147,8 +147,10 @@ window.onload = function() {
   // color spinning animation
     var angle = 0;
     var $text = document.querySelector("[data-id='colorful-text'] pre");
+
     function changeAngle() {
       angle = (angle + 3) % 360;
+      $text.style.borderImageSource = 'linear-gradient(' + angle + 'deg,' + window.color_sequence + ')';
       $text.style.background = 'linear-gradient(' + angle + 'deg,' + window.color_sequence + ')';
       $text.style.WebkitBackgroundClip = 'text';
       $text.style.WebkitTextFillColor = 'transparent';
@@ -161,4 +163,3 @@ window.onload = function() {
     }
     startSpinning();
 };
-
