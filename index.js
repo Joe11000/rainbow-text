@@ -7,6 +7,10 @@ window.onload = function() {
   }
 
   function setURI(message, font_size=undefined, font_family=undefined, colors=window.default_color_sequence){
+    if(button_text_changed){
+      document.querySelector('#controls #output-html-wrapper button').innerHTML = " Copy URL: ";
+    }
+
     if(message === ''){
       document.querySelector("[data-id='output-html']").innerHTML = '';
     }
@@ -160,5 +164,23 @@ window.onload = function() {
       clearInterval(window.rainbowIntervalID);
     }
     startSpinning();
+
+
+    // Clipboard
+    var clipboard = new Clipboard('#controls #output-html-wrapper button');
+    var button_text_changed = false;
+
+    clipboard.on('success', function(e) {
+      document.querySelector('#controls #output-html-wrapper button').innerHTML = 'Copied!!!'
+      button_text_changed = true;
+      e.clearSelection();
+    });
+
+    clipboard.on('error', function(e) {
+      button_text_changed = false
+      console.error('Action:', e.action);
+      console.error('Trigger:', e.trigger);
+    });
+
 };
 

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" type="text/css" href="index.css">
+  <link rel="stylesheet" type="text/css" href="index_min.css">
+  <script src="third_party_library/clipboard.min.js"></script>
 </head>
 <body>
   <div id="colorful-text" data-id='colorful-text'>
@@ -38,15 +39,14 @@
         <option value='Sans-Serif'>Sans-Serif</option>
         <option value='Serif'>Serif</option>
         <option value='xiomara_script'>Xiomara Script</option>
-
-
-
-
       </select>
     </div>
 
-    <div id='output-html-wrapper'>
-      <label for='output-html'> Copy URL: </label>
+    <div id='output-html-wrapper' data-id='output-html-wrapper'>
+      <div id='button-wrapper'>
+        <button data-clipboard-target="[data-id='output-html']"> Copy URL: </button>
+
+      </div>
 
       <p id='output-html' data-id='output-html'></p>
     </div>
@@ -54,7 +54,7 @@
     <p>Use -> <a href='https://bitly.com/'>bitly.com</a> <- to shorten url and disguise message that will be displayed</p>
   </div>
 
-  <script src="index.js"></script>
+  <script src="index_min.js"></script>
 
   </body>
 </html>

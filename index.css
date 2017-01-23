@@ -82,9 +82,18 @@
 
   #controls #output-html-wrapper {
     display: flex;
+    align-items: stretch;
   }
-  #controls #output-html-wrapper label{
+
+  #controls #output-html-wrapper #button-wrapper{
     min-width: 125px;
+    margin-right: 5px;
+  }
+
+  #controls #output-html-wrapper button{
+    width: 100%;
+    height: 100%;
+    color: black;
   }
   #controls #output-html-wrapper p {
     margin: 0 auto;
