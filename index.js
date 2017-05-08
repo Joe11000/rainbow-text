@@ -2,6 +2,15 @@ window.onload = function() {
 
   window.default_color_sequence = "red,orange,yellow,green,blue,indigo,red,orange,yellow,green,blue,indigo";
 
+  function createColorSelectors() {
+        // <div class="color-selector">
+        //   <input type='color' class='input-color' value=''/>
+        //   <a href='#' class='delete-color-link' data-class='delete-color' >
+        //     <img src="delete.png">
+        //   </a>
+        // </div>
+  }
+
   function getColors(){
     return window.color_sequence.replace(/ /g, '');
   }

@@ -81,6 +81,7 @@ body {
         height: 20px;
         padding: 5px; }
         #controls .color-selector-wrapper .color-selector .delete-color-link img {
+          width: 20px;
           position: relative;
           top: 50%;
           transform: translateY(-25%); }
