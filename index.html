@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" type="text/css" href="index_min.css">
+  <link rel="stylesheet" type="text/css" href="index.css">
   <script src="third_party_library/clipboard.min.js"></script>
 </head>
 <body>
@@ -11,6 +11,31 @@
 
   <div data-id='controls' id='controls'>
     <textarea focus placeholder='Type Message Here'></textarea>
+
+
+
+
+      <div class='color-selector-wrapper'>
+        <div class="color-selector">
+          <input type='color' class='input-color' value=''/>
+          <a href='#' class='delete-color-link' data-class='delete-color' >
+            <img src="delete.png" width='20px'>
+          </a>
+        </div>
+        <div class="color-selector">
+          <input type='color' class='input-color' value=''/>
+          <a href='#' class='delete-color-link' data-class='delete-color' >
+            <img src="delete.png" width='20px'>
+          </a>
+        </div>
+        <div class="color-selector">
+          <button class='add-color-button' data-id='add-color-button'/>&#10133;</button>
+        </div>
+      </div>
+
+
+
+
 
     <div id='font-styles-wrapper'>
       <div id='font-size-range-wrapper'>

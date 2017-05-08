@@ -1,0 +1,188 @@
+  @font-face {
+    font-family: 'bioshock';
+    src: url('fonts/bioshock.ttf');
+  }
+  @font-face {
+    font-family: 'angel';
+    src: url('fonts/angel.otf');
+  }
+  @font-face {
+    font-family: 'billion_stars';
+    src: url('fonts/billion_stars.ttf');
+  }
+  @font-face {
+    font-family: 'billy_argel';
+    src: url('fonts/billy_argel.otf');
+  }
+  @font-face {
+    font-family: 'collegiateHeavyOutline.ttf';
+    src: url('fonts/collegiateHeavyOutline.ttf.tff');
+  }
+  @font-face {
+    font-family: 'cookie_monster';
+    src: url('fonts/cookie_monster.ttf');
+  }
+  @font-face {
+    font-family: 'diploma';
+    src: url('fonts/diploma.ttf');
+  }
+  @font-face {
+    font-family: 'disney';
+    src: url('fonts/disney.ttf');
+  }
+  @font-face {
+    font-family: 'mothman';
+    src: url('fonts/mothman.ttf');
+  }
+  @font-face {
+    font-family: 'mardian';
+    src: url('fonts/mardian.ttf');
+  }
+  @font-face {
+    font-family: 'mrb';
+    src: url('fonts/mrb.ttf');
+  }
+  @font-face {
+    font-family: 'respective';
+    src: url('fonts/respective.ttf');
+  }
+  @font-face {
+    font-family: 'sport';
+    src: url('fonts/sport.ttf');
+  }
+  @font-face {
+    font-family: 'xiomara_script';
+    src: url('fonts/xiomara_script.ttf');
+  }
+
+  body {
+    background: black;
+
+    * {
+      box-sizing: border-box;
+    }
+  }
+
+  #controls {
+    border: 2px dotted white;
+    display: none;
+    max-width: 650px;
+    margin: 20px auto;
+    overflow: hidden;
+    padding: 5px;
+
+    * {
+      font-size: 20px;
+    }
+
+    *:not(textarea):not(select) {
+      color: white;
+    }
+
+    textarea {
+      width: 100%;
+      text-align: center;
+    }
+
+    .color-selector-wrapper {
+      width: 100%;
+      // height: 50px;
+      margin: 10px;
+      overflow-x: scroll;
+      display: inline-block;
+
+      .color-selector {
+        display: inline-block;
+        border: 2px solid white;
+
+        &:not(:first-of-type) {
+          margin-left: 15px;
+        }
+
+        &:last-of-type {
+          border: 0px solid black;
+
+        }
+
+        &* {
+          display: inline-block;
+        }
+
+        .input-color {
+          height: 50px;
+          width: 50px;
+        }
+        .delete-color-link {
+          width: 40px;
+          height: 20px;
+          padding: 5px;
+          // vertical-align: middle;
+
+          img{
+            position: relative;
+            top: 50%;
+            transform: translateY(-25%);
+
+          }
+        }
+
+        .add-color-button {
+          border-radius: 5px;
+          position: relative;
+          top: 50%;
+          transform: translateY(-25%);
+
+        }
+      }
+    }
+
+
+
+    #output-html-wrapper {
+      display: flex;
+      align-items: stretch;
+
+      #button-wrapper{
+        min-width: 125px;
+        margin-right: 5px;
+      }
+
+      button{
+        width: 100%;
+        height: 100%;
+        color: black;
+      }
+
+      p {
+        margin: 0 auto;
+        flex: 1;
+      }
+    }
+
+    #font-styles-wrapper{
+      display: flex;
+      margin: 10px auto;
+
+
+      #font-size-range-wrapper{
+        flex: 1;
+        display: flex;
+
+        input[type='range']{
+          flex: 1;
+          margin: 0 10px;
+        }
+      }
+    }
+  }
+
+  #colorful-text{
+    text-align: center;
+
+    pre {
+      font-size: 135px;
+      margin: 20px auto 40px;
+      line-height: 1.75em;
+    }
+  }
+
