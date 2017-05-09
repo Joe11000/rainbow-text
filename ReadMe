@@ -6,10 +6,10 @@ New Feature: Add a url param "edit=true" before the message='...' param in the u
 
 Sample Usage
   # TYT
-  http://rainbow-text.herokuapp.com/index.html?font-size=118px&font-family=Fantasy&message=%25F0%259F%2590%25BA%2520%2520%2520TYT%2520%2520%2520%25F0%259F%2590%25BA%250AIs%250AToo%250A%25F0%259F%2590%25BE%2520%2520Strong%2520%2520%25F0%259F%2590%25BE%250A
+    https://rainbow-text.herokuapp.com/index.html?font-size=118px&font-family=fantasy&message=%25F0%259F%2590%25BA%2520%2520%2520TYT%2520%2520%2520%25F0%259F%2590%25BA%250AIs%250AToo%250A%25F0%259F%2590%25BE%2520%2520Strong%2520%2520%25F0%259F%2590%25BE
 
   # Edit TYT Message
-  http://rainbow-text.herokuapp.com/index.html?edit=true&font-size=118px&font-family=Fantasy&message=%25F0%259F%2590%25BA%2520%2520%2520TYT%2520%2520%2520%25F0%259F%2590%25BA%250AIs%250AToo%250A%25F0%259F%2590%25BE%2520%2520Strong%2520%2520%25F0%259F%2590%25BE
+    https://rainbow-text.herokuapp.com/index.html?edit=true&font-size=118px&font-family=fantasy&message=%25F0%259F%2590%25BA%2520%2520%2520TYT%2520%2520%2520%25F0%259F%2590%25BA%250AIs%250AToo%250A%25F0%259F%2590%25BE%2520%2520Strong%2520%2520%25F0%259F%2590%25BE
 
 
 
@@ -35,7 +35,7 @@ Sample Usage
     https://rainbow-text.herokuapp.com/index.html?font-size=152px&color_sequence=%231a472a%2C%232a623d%2C%235d5d5d%2C%232a623d%2C%231a472a%2C%23FFFFFF%2C%231a472a%2C%232a623d%2C%235d5d5d%2C%232a623d%2C%231a472a%2C%231a472a%2C%232a623d%2C%235d5d5d%2C%232a623d%2C%231a472a&font-family=fantasy&message=Joseph%2520Noonan%250A%25F0%259F%2590%258D%2520-%252027%2520-%2520%25F0%259F%2590%258D%250ASlytherin
 
     # Edit Slytherin
-      https://rainbow-text.herokuapp.com/index.html?font-size=152px&color_sequence=%231a472a%2C%232a623d%2C%235d5d5d%2C%232a623d%2C%231a472a%2C%23FFFFFF%2C%231a472a%2C%232a623d%2C%235d5d5d%2C%232a623d%2C%231a472a%2C%231a472a%2C%232a623d%2C%235d5d5d%2C%232a623d%2C%231a472a&font-family=fantasy&message=Joseph%2520Noonan%250A%25F0%259F%2590%258D%2520-%252027%2520-%2520%25F0%259F%2590%258D%250ASlytherin
+      https://rainbow-text.herokuapp.com/index.html?edit=true&font-size=152px&color_sequence=%231a472a%2C%232a623d%2C%235d5d5d%2C%232a623d%2C%231a472a%2C%23FFFFFF%2C%231a472a%2C%232a623d%2C%235d5d5d%2C%232a623d%2C%231a472a%2C%231a472a%2C%232a623d%2C%235d5d5d%2C%232a623d%2C%231a472a&font-family=fantasy&message=Joseph%2520Noonan%250A%25F0%259F%2590%258D%2520-%252027%2520-%2520%25F0%259F%2590%258D%250ASlytherin
 
     # Slytherin color insert
       color_sequence = '#1a472a,#2a623d,#5d5d5d,#2a623d,#1a472a,#FFFFFF,#1a472a,#2a623d,#5d5d5d,#2a623d,#1a472a,#1a472a,#2a623d,#5d5d5d,#2a623d,#1a472a'
