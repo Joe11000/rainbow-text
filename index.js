@@ -16,7 +16,6 @@
       return color_input.value
     }).join(',')
 
-    debugger
     stopSpinning();
     window.color_sequence = result;
     startSpinning();
@@ -55,7 +54,6 @@
     let font_size = args['font_size'] || getFontSize();
     let font_family = args['font_family'] || getFontFamily();
     let colors = args['colors'] || getColors();
-    debugger
 
 
     if(button_text_changed){
@@ -73,27 +71,6 @@
       `?font-size=${font_size}` + color_sequence_for_uri + `&font-family=${font_family.replace(/ /g, '%20')}` + message_sequence_for_uri;
 
   }
-
-  // function setURI(message, font_size=undefined, font_family=undefined, colors=window.default_color_sequence){
-
-  //   if(button_text_changed){
-  //     document.querySelector('#controls #output-html-wrapper button').innerHTML = " Copy URL: ";
-  //   }
-
-  //   if(message === ''){
-  //     document.querySelector("[data-id='output-html']").innerHTML = '';
-  //   }
-  //   else{
-  //     // only add a color string if color is not default
-  //     let color_sequence_for_uri = '';
-  //     if(colors != window.default_color_sequence){
-  //       color_sequence_for_uri = `&color_sequence=${encodeURIComponent(colors)}`;
-  //     }
-  //     message_sequence_for_uri = `&message=${encodeURIComponent(encodeURIComponent(message))}`;
-  //     document.querySelector("[data-id='output-html']").innerHTML = document.location.origin + document.location.pathname +
-  //       `?font-size=${font_size}` + color_sequence_for_uri + `&font-family=${font_family.replace(/ /g, '%20')}` + message_sequence_for_uri;
-  //   }
-  // }
 
   function getText() {
     return document.querySelector("[data-id='colorful-text'] pre").innerHTML;
