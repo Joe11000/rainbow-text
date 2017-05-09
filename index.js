@@ -12,6 +12,7 @@
   window.default_color_sequence = "#FF0000,#FFA500,#FFFF00,#00FF00,#0000FF,#4B0082,#FF0000,#FFA500,#FFFF00,#00FF00,#0000FF,#4B0082";
 
   function updateColorSelectors(){
+    debugger
     result = $("[data-class='color-selector'] input").toArray().map(function(color_input){
       return color_input.value
     }).join(',')
