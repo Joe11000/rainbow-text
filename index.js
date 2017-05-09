@@ -1,40 +1,99 @@
-window.onload = function() {
+(function() {
 
-  window.default_color_sequence = "red,orange,yellow,green,blue,indigo,red,orange,yellow,green,blue,indigo";
+  const color_hash = {
+    'red': '#FF0000',
+    'orange': '#FFA500',
+    'yellow': '#FFFF00',
+    'green': '#00FF00',
+    'blue': '#0000FF',
+    'indigo': '#4B0082'
+  };
 
-  function createColorSelectors() {
-        // <div class="color-selector">
-        //   <input type='color' class='input-color' value=''/>
-        //   <a href='#' class='delete-color-link' data-class='delete-color' >
-        //     <img src="delete.png">
-        //   </a>
-        // </div>
+  window.default_color_sequence = "#FF0000,#FFA500,#FFFF00,#00FF00,#0000FF,#4B0082,#FF0000,#FFA500,#FFFF00,#00FF00,#0000FF,#4B0082";
+
+  function updateColorSelectors(){
+    result = $("[data-class='color-selector'] input").toArray().map(function(color_input){
+      return color_input.value
+    }).join(',')
+
+    debugger
+    stopSpinning();
+    window.color_sequence = result;
+    startSpinning();
+
+    setURI( { 'colors': color_sequence } );
+  }
+
+  function createColorSelectors(colors_str) {
+    var result = '';
+
+    colors_str.split(',').forEach( (color) => {
+      color_hex = color_hash[color] || color;
+
+      result += `<div class='color-selector' data-class='color-selector'>
+        <input type='color' class='input-color' value='${color_hex}'/>
+        <a href='#' class='delete-color-link' data-class='delete-color-link'>
+          <img src="delete.png">
+        </a>
+      </div>
+      `;
+    });
+
+    return result;
+  }
+
+  function createColorButton(){
+    return `<button class='add-color-button' data-id='add-color-button'/>&#10133;</button>`;
   }
 
   function getColors(){
     return window.color_sequence.replace(/ /g, '');
   }
 
-  function setURI(message, font_size=undefined, font_family=undefined, colors=window.default_color_sequence){
+  function setURI(args){
+    let message = args['message'] || getText();
+    let font_size = args['font_size'] || getFontSize();
+    let font_family = args['font_family'] || getFontFamily();
+    let colors = args['colors'] || getColors();
+    debugger
+
+
     if(button_text_changed){
       document.querySelector('#controls #output-html-wrapper button').innerHTML = " Copy URL: ";
     }
 
-    if(message === ''){
-      document.querySelector("[data-id='output-html']").innerHTML = '';
+    // only add a color string if color is not default
+    let color_sequence_for_uri = '';
+    if(colors != window.default_color_sequence){
+      color_sequence_for_uri = `&color_sequence=${encodeURIComponent(colors)}`;
     }
-    else{
-      // only add a color string if color is not default
-      let color_sequence_for_uri = '';
-      if(colors != window.default_color_sequence){
-        color_sequence_for_uri = `&color_sequence=${encodeURIComponent(colors)}`;
-      }
 
-      message_sequence_for_uri = `&message=${encodeURIComponent(encodeURIComponent(message))}`;
-      document.querySelector("[data-id='output-html']").innerHTML = document.location.origin + document.location.pathname +
-        `?font-size=${font_size}` + color_sequence_for_uri + `&font-family=${font_family.replace(/ /g, '%20')}` + message_sequence_for_uri;
-    }
+    let message_sequence_for_uri = `&message=${encodeURIComponent(encodeURIComponent(message))}`;
+    document.querySelector("[data-id='output-html']").innerHTML = document.location.origin + document.location.pathname +
+      `?font-size=${font_size}` + color_sequence_for_uri + `&font-family=${font_family.replace(/ /g, '%20')}` + message_sequence_for_uri;
+
   }
+
+  // function setURI(message, font_size=undefined, font_family=undefined, colors=window.default_color_sequence){
+
+  //   if(button_text_changed){
+  //     document.querySelector('#controls #output-html-wrapper button').innerHTML = " Copy URL: ";
+  //   }
+
+  //   if(message === ''){
+  //     document.querySelector("[data-id='output-html']").innerHTML = '';
+  //   }
+  //   else{
+  //     // only add a color string if color is not default
+  //     let color_sequence_for_uri = '';
+  //     if(colors != window.default_color_sequence){
+  //       color_sequence_for_uri = `&color_sequence=${encodeURIComponent(colors)}`;
+  //     }
+  //     message_sequence_for_uri = `&message=${encodeURIComponent(encodeURIComponent(message))}`;
+  //     document.querySelector("[data-id='output-html']").innerHTML = document.location.origin + document.location.pathname +
+  //       `?font-size=${font_size}` + color_sequence_for_uri + `&font-family=${font_family.replace(/ /g, '%20')}` + message_sequence_for_uri;
+  //   }
+  // }
 
   function getText() {
     return document.querySelector("[data-id='colorful-text'] pre").innerHTML;
@@ -52,19 +111,19 @@ window.onload = function() {
     $textbox = document.querySelector("[data-id='controls'] textarea");
     $textbox.addEventListener('input', function(e){
       setText(this.value);
-      setURI( this.value, getFontSize(), getFontFamily(), getColors() );
+      setURI( { message: this.value } );
     });
 
     // font-size slider listener
     document.querySelector("[data-id='font-size-range']").addEventListener('input', function(e){
       setTextSize(this.value + 'px');
-      setURI( getText(), this.value + 'px', getFontFamily(), getColors() );
+      setURI( {'font-family': this.value + 'px' } );
     });
 
     // font-style listener
     document.querySelector("[data-id='font-family-selector']").addEventListener('input', function(e){
       setFontFamily(this.value);
-      setURI( getText(), getFontSize(), this.value, getColors() );
+      setURI( {'font-style': this.value });
     });
   }
 
@@ -82,6 +141,7 @@ window.onload = function() {
 
     document.querySelector("[data-id='colorful-text'] pre").style.fontFamily = style;
   }
+
 
   // option 1: no parameters -> make page display text
     if(document.location.search === '') {
@@ -146,7 +206,7 @@ window.onload = function() {
         edit_existing = false;
       }
 
-      setURI( message, font_size, font_family, window.color_sequence );
+      setURI( { 'message': message, 'font_size': font_size, 'font_family': font_family, 'colors': window.color_sequence } );
 
       // option 3: all parameters and url param "edit=true" ->
       if(edit_existing) // add default edit_existing
@@ -166,6 +226,7 @@ window.onload = function() {
       $text.style.WebkitBackgroundClip = 'text';
       $text.style.WebkitTextFillColor = 'transparent';
     }
+
     window.startSpinning = function(){
       window.rainbowIntervalID = setInterval(changeAngle, 50);
     }
@@ -174,6 +235,25 @@ window.onload = function() {
     }
     startSpinning();
 
+    document.querySelector("[data-id='color-selector-wrapper']").innerHTML = createColorSelectors(getColors()) + createColorButton();
+
+    // add color
+    $("[data-id='add-color-button']").on('click', function(e) {
+      $("[data-id='add-color-button']").before(createColorSelectors('#000000'))
+    });
+
+    // change color
+    $("[data-id='color-selector-wrapper']").on('change', "[data-class='delete-color-link']", function(e) {
+      updateColorSelectors();
+    });
+
+    // delete color
+    $("[data-id='color-selector-wrapper']").on('click', "[data-class='delete-color-link']", function(e) {
+      e.preventDefault();
+
+      $(this).parent("[data-class='color-selector']").remove();
+      updateColorSelectors();
+    });
 
     // Clipboard
     var clipboard = new Clipboard('#controls #output-html-wrapper button');
@@ -191,5 +271,5 @@ window.onload = function() {
       console.error('Trigger:', e.trigger);
     });
 
-};
 
+})();

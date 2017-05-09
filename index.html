@@ -2,7 +2,14 @@
 <html>
 <head>
   <link rel="stylesheet" type="text/css" href="index.css">
+
+  <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+
   <script src="third_party_library/clipboard.min.js"></script>
+
 </head>
 <body>
   <div id="colorful-text" data-id='colorful-text'>
@@ -12,30 +19,8 @@
   <div data-id='controls' id='controls'>
     <textarea focus placeholder='Type Message Here'></textarea>
 
-
-
-
-      <div class='color-selector-wrapper'>
-        <div class="color-selector">
-          <input type='color' class='input-color' value=''/>
-          <a href='#' class='delete-color-link' data-class='delete-color' >
-            <img src="delete.png">
-          </a>
-        </div>
-        <div class="color-selector">
-          <input type='color' class='input-color' value=''/>
-          <a href='#' class='delete-color-link' data-class='delete-color' >
-            <img src="delete.png">
-          </a>
-        </div>
-
-        <div class="color-selector">
-          <button class='add-color-button' data-id='add-color-button'/>&#10133;</button>
-        </div>
+      <div class='color-selector-wrapper' data-id='color-selector-wrapper'>
       </div>
-
-
-
 
 
     <div id='font-styles-wrapper'>
@@ -77,7 +62,7 @@
     <p>Use -> <a href='https://bitly.com/'>bitly.com</a> <- to shorten url and disguise message that will be displayed</p>
   </div>
 
-  <script src="index_min.js"></script>
+  <script src="index.js"></script>
 
   </body>
 </html>

@@ -52,6 +52,8 @@ body {
   margin: 20px auto;
   overflow: hidden;
   padding: 5px; }
+  #controls > * {
+    margin: 15px 0; }
   #controls * {
     font-size: 20px; }
   #controls *:not(textarea):not(select) {
@@ -63,33 +65,33 @@ body {
     width: 100%;
     margin: 10px;
     overflow-x: scroll;
-    display: inline-block; }
+    white-space: nowrap; }
     #controls .color-selector-wrapper .color-selector {
       display: inline-block;
       border: 2px solid white; }
       #controls .color-selector-wrapper .color-selector:not(:first-of-type) {
         margin-left: 15px; }
-      #controls .color-selector-wrapper .color-selector:last-of-type {
-        border: 0px solid black; }
-      #controls .color-selector-wrapper .color-selector* {
+      #controls .color-selector-wrapper .color-selector * {
         display: inline-block; }
       #controls .color-selector-wrapper .color-selector .input-color {
         height: 50px;
         width: 50px; }
       #controls .color-selector-wrapper .color-selector .delete-color-link {
-        width: 40px;
-        height: 20px;
-        padding: 5px; }
+        width: 50px;
+        height: 40px;
+        text-align: center;
+        position: relative; }
         #controls .color-selector-wrapper .color-selector .delete-color-link img {
+          position: absolute;
           width: 20px;
-          position: relative;
           top: 50%;
-          transform: translateY(-25%); }
-      #controls .color-selector-wrapper .color-selector .add-color-button {
-        border-radius: 5px;
-        position: relative;
-        top: 50%;
-        transform: translateY(-25%); }
+          left: 50%;
+          transform: translate(-50%, -50%); }
+    #controls .color-selector-wrapper .add-color-button {
+      border-radius: 5px;
+      position: relative;
+      top: -10px;
+      margin: 0 25px 0 15px; }
   #controls #output-html-wrapper {
     display: flex;
     align-items: stretch; }
