@@ -91,10 +91,8 @@ Sample Usage
       # Edit Slytherclaw
         https://rainbow-text.herokuapp.com/index.html?edit=true&font-size=155px&color_sequence=%231a472a%2C%232a623d%2C%235d5d5d%2C%232a623d%2C%231a472a%2C%23FFFFFF%2C%231a472a%2C%232a623d%2C%235d5d5d%2C%232a623d%2C%231a472a%2C%231a472a%2C%232a623d%2C%235d5d5d%2C%232a623d%2C%231a472a%2C%23946b2d%2C%230e1a40%2C%23222f5b%2C%235d5d5d%2C%23222f5b%2C%230e1a40%2C%23FFFFFF%2C%230e1a40%2C%23222f5b%2C%235d5d5d%2C%23222f5b%2C%230e1a40%2C%230e1a40%2C%23222f5b%2C%235d5d5d%2C%23222f5b%2C%230e1a40%2C%23946b2d&font-family=bioshock&message=Joseph%2520Noonan%250A%25F0%259F%2590%258D%2520-%252027%2520-%2520%25F0%259F%258E%2593%250ASlytherclaw
 
-
     # Slytherclaw color insert
       color_sequence = '#1a472a,#2a623d,#5d5d5d,#2a623d,#1a472a,#FFFFFF,#1a472a,#2a623d,#5d5d5d,#2a623d,#1a472a,#1a472a,#2a623d,#5d5d5d,#2a623d,#1a472a,#946b2d,#0e1a40,#222f5b,#5d5d5d,#222f5b,#0e1a40,#FFFFFF,#0e1a40,#222f5b,#5d5d5d,#222f5b,#0e1a40,#0e1a40,#222f5b,#5d5d5d,#222f5b,#0e1a40,#946b2d'
-
 
     # Slytherclaw colors
       # Slytherin colors
@@ -137,3 +135,21 @@ Sample Usage
       #906200 (144,98,0) -
       #1e1301 (30,19,1)
       #000000 (0,0,0)
+
+
+  # Chicago Bears
+    https://rainbow-text.herokuapp.com/index.html?font-size=160px&color_sequence=%2303202F%2C%23111111%2C%23DD4814%2C%23DD4814%2C%23111111%2C%2303202F%2C%23FFFFFF%2C%2303202F%2C%23111111%2C%23DD4814%2C%23DD4814%2C%23111111%2C%2303202F&font-family=sport&message=Joseph%2520Noonan%250A%25F0%259F%2590%258D%2520-%252027%2520-%2520%25F0%259F%2590%2580%250AChicago%2520Bears
+
+     # Edit Chicago Bears
+      https://rainbow-text.herokuapp.com/index.html?edit=true&font-size=160px&color_sequence=%2303202F%2C%23111111%2C%23DD4814%2C%23DD4814%2C%23111111%2C%2303202F%2C%23FFFFFF%2C%2303202F%2C%23111111%2C%23DD4814%2C%23DD4814%2C%23111111%2C%2303202F&font-family=sport&message=Joseph%2520Noonan%250A%25F0%259F%2590%258D%2520-%252027%2520-%2520%25F0%259F%2590%2580%250AChicago%2520Bears
+
+    # Chicago Bears color insert
+      color_sequence = '#DD4814,#03202F,#ae0001,#DD4814,#ae0001,#03202F,#FFFFFF,#03202F,#ae0001,#DD4814,#ae0001,#03202F,#03202F,#ae0001,#DD4814,#ae0001,#03202F,#DD4814'
+
+
+    # Chicago Bears colors
+      # Chicago Bears colors
+        ORANGE HEX CODE: #DD4814; RGB: (221,72,20)
+        DARK NAVY COLOR: #03202F; RGB: (3,32,47)
+
+
