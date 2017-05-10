@@ -14,10 +14,10 @@ Sample Usage
 
 
   # Gryffindor
-    https://rainbow-text.herokuapp.com/index.html?font-size=175px&color_sequence=%23eeba30%2C%23740001%2C%23ae0001%2C%23eeba30%2C%23ae0001%2C%23740001%2C%23FFFFFF%2C%23740001%2C%23ae0001%2C%23eeba30%2C%23ae0001%2C%23740001%2C%23740001%2C%23ae0001%2C%23eeba30%2C%23ae0001%2C%23740001%2C%23eeba30&font-family=Copperplate,"Copperplate%20Gothic%20Light"&message=Joseph%2520Noonan%250A%25F0%259F%25A6%2581%2520-%252027%2520-%2520%25F0%259F%25A6%2581%250AGryffindor
+    https://rainbow-text.herokuapp.com/index.html?font-size=175px&color-sequence=%23eeba30%2C%23740001%2C%23ae0001%2C%23eeba30%2C%23ae0001%2C%23740001%2C%23FFFFFF%2C%23740001%2C%23ae0001%2C%23eeba30%2C%23ae0001%2C%23740001%2C%23740001%2C%23ae0001%2C%23eeba30%2C%23ae0001%2C%23740001%2C%23eeba30&font-family=Copperplate,"Copperplate%20Gothic%20Light"&message=Joseph%2520Noonan%250A%25F0%259F%25A6%2581%2520-%252027%2520-%2520%25F0%259F%25A6%2581%250AGryffindor
 
     # Edit Gryffindor
-      https://rainbow-text.herokuapp.com/index.html?edit=true&font-size=175px&color_sequence=%23eeba30%2C%23740001%2C%23ae0001%2C%23eeba30%2C%23ae0001%2C%23740001%2C%23FFFFFF%2C%23740001%2C%23ae0001%2C%23eeba30%2C%23ae0001%2C%23740001%2C%23740001%2C%23ae0001%2C%23eeba30%2C%23ae0001%2C%23740001%2C%23eeba30&font-family=Copperplate,"Copperplate%20Gothic%20Light"&message=Joseph%2520Noonan%250A%25F0%259F%25A6%2581%2520-%252027%2520-%2520%25F0%259F%25A6%2581%250AGryffindor
+      https://rainbow-text.herokuapp.com/index.html?edit=true&font-size=175px&color-sequence=%23eeba30%2C%23740001%2C%23ae0001%2C%23eeba30%2C%23ae0001%2C%23740001%2C%23FFFFFF%2C%23740001%2C%23ae0001%2C%23eeba30%2C%23ae0001%2C%23740001%2C%23740001%2C%23ae0001%2C%23eeba30%2C%23ae0001%2C%23740001%2C%23eeba30&font-family=Copperplate,"Copperplate%20Gothic%20Light"&message=Joseph%2520Noonan%250A%25F0%259F%25A6%2581%2520-%252027%2520-%2520%25F0%259F%25A6%2581%250AGryffindor
 
     # Gryffindor color insert
       color_sequence = '#eeba30,#740001,#ae0001,#eeba30,#ae0001,#740001,#FFFFFF,#740001,#ae0001,#eeba30,#ae0001,#740001,#740001,#ae0001,#eeba30,#ae0001,#740001,#eeba30'
@@ -32,10 +32,10 @@ Sample Usage
 
 
   # Slytherin
-    https://rainbow-text.herokuapp.com/index.html?font-size=152px&color_sequence=%231a472a%2C%232a623d%2C%235d5d5d%2C%232a623d%2C%231a472a%2C%23FFFFFF%2C%231a472a%2C%232a623d%2C%235d5d5d%2C%232a623d%2C%231a472a%2C%231a472a%2C%232a623d%2C%235d5d5d%2C%232a623d%2C%231a472a&font-family=fantasy&message=Joseph%2520Noonan%250A%25F0%259F%2590%258D%2520-%252027%2520-%2520%25F0%259F%2590%258D%250ASlytherin
+    https://rainbow-text.herokuapp.com/index.html?font-size=152px&color-sequence=%231a472a%2C%232a623d%2C%235d5d5d%2C%232a623d%2C%231a472a%2C%23FFFFFF%2C%231a472a%2C%232a623d%2C%235d5d5d%2C%232a623d%2C%231a472a%2C%231a472a%2C%232a623d%2C%235d5d5d%2C%232a623d%2C%231a472a&font-family=fantasy&message=Joseph%2520Noonan%250A%25F0%259F%2590%258D%2520-%252027%2520-%2520%25F0%259F%2590%258D%250ASlytherin
 
     # Edit Slytherin
-      https://rainbow-text.herokuapp.com/index.html?edit=true&font-size=152px&color_sequence=%231a472a%2C%232a623d%2C%235d5d5d%2C%232a623d%2C%231a472a%2C%23FFFFFF%2C%231a472a%2C%232a623d%2C%235d5d5d%2C%232a623d%2C%231a472a%2C%231a472a%2C%232a623d%2C%235d5d5d%2C%232a623d%2C%231a472a&font-family=fantasy&message=Joseph%2520Noonan%250A%25F0%259F%2590%258D%2520-%252027%2520-%2520%25F0%259F%2590%258D%250ASlytherin
+      https://rainbow-text.herokuapp.com/index.html?edit=true&font-size=152px&color-sequence=%231a472a%2C%232a623d%2C%235d5d5d%2C%232a623d%2C%231a472a%2C%23FFFFFF%2C%231a472a%2C%232a623d%2C%235d5d5d%2C%232a623d%2C%231a472a%2C%231a472a%2C%232a623d%2C%235d5d5d%2C%232a623d%2C%231a472a&font-family=fantasy&message=Joseph%2520Noonan%250A%25F0%259F%2590%258D%2520-%252027%2520-%2520%25F0%259F%2590%258D%250ASlytherin
 
     # Slytherin color insert
       color_sequence = '#1a472a,#2a623d,#5d5d5d,#2a623d,#1a472a,#FFFFFF,#1a472a,#2a623d,#5d5d5d,#2a623d,#1a472a,#1a472a,#2a623d,#5d5d5d,#2a623d,#1a472a'
@@ -50,10 +50,10 @@ Sample Usage
 
 
   # Ravenclaw
-    https://rainbow-text.herokuapp.com/index.html?font-size=177px&color_sequence=%23946b2d%2C%230e1a40%2C%23222f5b%2C%235d5d5d%2C%23222f5b%2C%230e1a40%2C%23FFFFFF%2C%230e1a40%2C%23222f5b%2C%235d5d5d%2C%23222f5b%2C%230e1a40%2C%230e1a40%2C%23222f5b%2C%235d5d5d%2C%23222f5b%2C%230e1a40%2C%23946b2d&font-family=diploma&message=Joseph%2520Noonan%250A%25F0%259F%258E%2593%2520-%252027%2520-%2520%25F0%259F%258E%2593%250ARavenclaw
+    https://rainbow-text.herokuapp.com/index.html?font-size=177px&color-sequence=%23946b2d%2C%230e1a40%2C%23222f5b%2C%235d5d5d%2C%23222f5b%2C%230e1a40%2C%23FFFFFF%2C%230e1a40%2C%23222f5b%2C%235d5d5d%2C%23222f5b%2C%230e1a40%2C%230e1a40%2C%23222f5b%2C%235d5d5d%2C%23222f5b%2C%230e1a40%2C%23946b2d&font-family=diploma&message=Joseph%2520Noonan%250A%25F0%259F%258E%2593%2520-%252027%2520-%2520%25F0%259F%258E%2593%250ARavenclaw
 
     # Edit Ravenclaw
-      https://rainbow-text.herokuapp.com/index.html?edit=true&font-size=177px&color_sequence=%23946b2d%2C%230e1a40%2C%23222f5b%2C%235d5d5d%2C%23222f5b%2C%230e1a40%2C%23FFFFFF%2C%230e1a40%2C%23222f5b%2C%235d5d5d%2C%23222f5b%2C%230e1a40%2C%230e1a40%2C%23222f5b%2C%235d5d5d%2C%23222f5b%2C%230e1a40%2C%23946b2d&font-family=diploma&message=Joseph%2520Noonan%250A%25F0%259F%258E%2593%2520-%252027%2520-%2520%25F0%259F%258E%2593%250ARavenclaw
+      https://rainbow-text.herokuapp.com/index.html?edit=true&font-size=177px&color-sequence=%23946b2d%2C%230e1a40%2C%23222f5b%2C%235d5d5d%2C%23222f5b%2C%230e1a40%2C%23FFFFFF%2C%230e1a40%2C%23222f5b%2C%235d5d5d%2C%23222f5b%2C%230e1a40%2C%230e1a40%2C%23222f5b%2C%235d5d5d%2C%23222f5b%2C%230e1a40%2C%23946b2d&font-family=diploma&message=Joseph%2520Noonan%250A%25F0%259F%258E%2593%2520-%252027%2520-%2520%25F0%259F%258E%2593%250ARavenclaw
 
     # Ravenclaw color insert
       color_sequence = '#946b2d,#0e1a40,#222f5b,#5d5d5d,#222f5b,#0e1a40,#FFFFFF,#0e1a40,#222f5b,#5d5d5d,#222f5b,#0e1a40,#0e1a40,#222f5b,#5d5d5d,#222f5b,#0e1a40,#946b2d'
@@ -68,10 +68,10 @@ Sample Usage
 
 
   # Hufflepuff
-    https://rainbow-text.herokuapp.com/index.html?font-size=136px&color_sequence=%231e1301%2C%23eee117%2C%23e1b723%2C%23906200%2C%23e1b723%2C%23eee117%2C%23FFFFFF%2C%23eee117%2C%23e1b723%2C%23906200%2C%23e1b723%2C%23eee117%2C%23eee117%2C%23e1b723%2C%23906200%2C%23e1b723%2C%23eee117%2C%231e1301&font-family=Cursive&message=Joseph%2520Noonan%250A%25F0%259F%2590%2580%2520-%252027%2520-%2520%25F0%259F%2590%2580%250AHufflepuff
+    https://rainbow-text.herokuapp.com/index.html?font-size=136px&color-sequence=%231e1301%2C%23eee117%2C%23e1b723%2C%23906200%2C%23e1b723%2C%23eee117%2C%23FFFFFF%2C%23eee117%2C%23e1b723%2C%23906200%2C%23e1b723%2C%23eee117%2C%23eee117%2C%23e1b723%2C%23906200%2C%23e1b723%2C%23eee117%2C%231e1301&font-family=Cursive&message=Joseph%2520Noonan%250A%25F0%259F%2590%2580%2520-%252027%2520-%2520%25F0%259F%2590%2580%250AHufflepuff
 
     # Edit Hufflepuff
-      https://rainbow-text.herokuapp.com/index.html?edit=true&font-size=136px&color_sequence=%231e1301%2C%23eee117%2C%23e1b723%2C%23906200%2C%23e1b723%2C%23eee117%2C%23FFFFFF%2C%23eee117%2C%23e1b723%2C%23906200%2C%23e1b723%2C%23eee117%2C%23eee117%2C%23e1b723%2C%23906200%2C%23e1b723%2C%23eee117%2C%231e1301&font-family=Cursive&message=Joseph%2520Noonan%250A%25F0%259F%2590%2580%2520-%252027%2520-%2520%25F0%259F%2590%2580%250AHufflepuff
+      https://rainbow-text.herokuapp.com/index.html?edit=true&font-size=136px&color-sequence=%231e1301%2C%23eee117%2C%23e1b723%2C%23906200%2C%23e1b723%2C%23eee117%2C%23FFFFFF%2C%23eee117%2C%23e1b723%2C%23906200%2C%23e1b723%2C%23eee117%2C%23eee117%2C%23e1b723%2C%23906200%2C%23e1b723%2C%23eee117%2C%231e1301&font-family=Cursive&message=Joseph%2520Noonan%250A%25F0%259F%2590%2580%2520-%252027%2520-%2520%25F0%259F%2590%2580%250AHufflepuff
 
     # Hufflepuff color insert
       color_sequence = '#1e1301,#eee117,#e1b723,#906200,#e1b723,#eee117,#FFFFFF,#eee117,#e1b723,#906200,#e1b723,#eee117,#eee117,#e1b723,#906200,#e1b723,#eee117,#1e1301'
@@ -86,10 +86,10 @@ Sample Usage
 
 
   # Slytherclaw
-    https://rainbow-text.herokuapp.com/index.html?font-size=155px&color_sequence=%231a472a%2C%232a623d%2C%235d5d5d%2C%232a623d%2C%231a472a%2C%23FFFFFF%2C%231a472a%2C%232a623d%2C%235d5d5d%2C%232a623d%2C%231a472a%2C%231a472a%2C%232a623d%2C%235d5d5d%2C%232a623d%2C%231a472a%2C%23946b2d%2C%230e1a40%2C%23222f5b%2C%235d5d5d%2C%23222f5b%2C%230e1a40%2C%23FFFFFF%2C%230e1a40%2C%23222f5b%2C%235d5d5d%2C%23222f5b%2C%230e1a40%2C%230e1a40%2C%23222f5b%2C%235d5d5d%2C%23222f5b%2C%230e1a40%2C%23946b2d&font-family=bioshock&message=Joseph%2520Noonan%250A%25F0%259F%2590%258D%2520-%252027%2520-%2520%25F0%259F%258E%2593%250ASlytherclaw
+    https://rainbow-text.herokuapp.com/index.html?font-size=155px&color-sequence=%231a472a%2C%232a623d%2C%235d5d5d%2C%232a623d%2C%231a472a%2C%23FFFFFF%2C%231a472a%2C%232a623d%2C%235d5d5d%2C%232a623d%2C%231a472a%2C%231a472a%2C%232a623d%2C%235d5d5d%2C%232a623d%2C%231a472a%2C%23946b2d%2C%230e1a40%2C%23222f5b%2C%235d5d5d%2C%23222f5b%2C%230e1a40%2C%23FFFFFF%2C%230e1a40%2C%23222f5b%2C%235d5d5d%2C%23222f5b%2C%230e1a40%2C%230e1a40%2C%23222f5b%2C%235d5d5d%2C%23222f5b%2C%230e1a40%2C%23946b2d&font-family=bioshock&message=Joseph%2520Noonan%250A%25F0%259F%2590%258D%2520-%252027%2520-%2520%25F0%259F%258E%2593%250ASlytherclaw
 
       # Edit Slytherclaw
-        https://rainbow-text.herokuapp.com/index.html?edit=true&font-size=155px&color_sequence=%231a472a%2C%232a623d%2C%235d5d5d%2C%232a623d%2C%231a472a%2C%23FFFFFF%2C%231a472a%2C%232a623d%2C%235d5d5d%2C%232a623d%2C%231a472a%2C%231a472a%2C%232a623d%2C%235d5d5d%2C%232a623d%2C%231a472a%2C%23946b2d%2C%230e1a40%2C%23222f5b%2C%235d5d5d%2C%23222f5b%2C%230e1a40%2C%23FFFFFF%2C%230e1a40%2C%23222f5b%2C%235d5d5d%2C%23222f5b%2C%230e1a40%2C%230e1a40%2C%23222f5b%2C%235d5d5d%2C%23222f5b%2C%230e1a40%2C%23946b2d&font-family=bioshock&message=Joseph%2520Noonan%250A%25F0%259F%2590%258D%2520-%252027%2520-%2520%25F0%259F%258E%2593%250ASlytherclaw
+        https://rainbow-text.herokuapp.com/index.html?edit=true&font-size=155px&color-sequence=%231a472a%2C%232a623d%2C%235d5d5d%2C%232a623d%2C%231a472a%2C%23FFFFFF%2C%231a472a%2C%232a623d%2C%235d5d5d%2C%232a623d%2C%231a472a%2C%231a472a%2C%232a623d%2C%235d5d5d%2C%232a623d%2C%231a472a%2C%23946b2d%2C%230e1a40%2C%23222f5b%2C%235d5d5d%2C%23222f5b%2C%230e1a40%2C%23FFFFFF%2C%230e1a40%2C%23222f5b%2C%235d5d5d%2C%23222f5b%2C%230e1a40%2C%230e1a40%2C%23222f5b%2C%235d5d5d%2C%23222f5b%2C%230e1a40%2C%23946b2d&font-family=bioshock&message=Joseph%2520Noonan%250A%25F0%259F%2590%258D%2520-%252027%2520-%2520%25F0%259F%258E%2593%250ASlytherclaw
 
     # Slytherclaw color insert
       color_sequence = '#1a472a,#2a623d,#5d5d5d,#2a623d,#1a472a,#FFFFFF,#1a472a,#2a623d,#5d5d5d,#2a623d,#1a472a,#1a472a,#2a623d,#5d5d5d,#2a623d,#1a472a,#946b2d,#0e1a40,#222f5b,#5d5d5d,#222f5b,#0e1a40,#FFFFFF,#0e1a40,#222f5b,#5d5d5d,#222f5b,#0e1a40,#0e1a40,#222f5b,#5d5d5d,#222f5b,#0e1a40,#946b2d'
@@ -112,10 +112,10 @@ Sample Usage
 
 
   # Slytherpuff
-    https://rainbow-text.herokuapp.com/index.html?font-size=155px&color_sequence=%231a472a%2C%232a623d%2C%235d5d5d%2C%232a623d%2C%231a472a%2C%23FFFFFF%2C%231a472a%2C%232a623d%2C%235d5d5d%2C%232a623d%2C%231a472a%2C%231a472a%2C%232a623d%2C%235d5d5d%2C%232a623d%2C%231a472a%2C%231e1301%2C%23eee117%2C%23e1b723%2C%23906200%2C%23e1b723%2C%23eee117%2C%23FFFFFF%2C%23eee117%2C%23e1b723%2C%23906200%2C%23e1b723%2C%23eee117%2C%23eee117%2C%23e1b723%2C%23906200%2C%23e1b723%2C%23eee117%2C%231e1301&font-family=sport&message=Joseph%2520Noonan%250A%25F0%259F%2590%258D%2520-%252027%2520-%2520%25F0%259F%2590%2580%250ASlytherpuff
+    https://rainbow-text.herokuapp.com/index.html?font-size=155px&color-sequence=%231a472a%2C%232a623d%2C%235d5d5d%2C%232a623d%2C%231a472a%2C%23FFFFFF%2C%231a472a%2C%232a623d%2C%235d5d5d%2C%232a623d%2C%231a472a%2C%231a472a%2C%232a623d%2C%235d5d5d%2C%232a623d%2C%231a472a%2C%231e1301%2C%23eee117%2C%23e1b723%2C%23906200%2C%23e1b723%2C%23eee117%2C%23FFFFFF%2C%23eee117%2C%23e1b723%2C%23906200%2C%23e1b723%2C%23eee117%2C%23eee117%2C%23e1b723%2C%23906200%2C%23e1b723%2C%23eee117%2C%231e1301&font-family=sport&message=Joseph%2520Noonan%250A%25F0%259F%2590%258D%2520-%252027%2520-%2520%25F0%259F%2590%2580%250ASlytherpuff
 
      # Edit Slytherpuff
-      https://rainbow-text.herokuapp.com/index.html?edit=true&font-size=155px&color_sequence=%231a472a%2C%232a623d%2C%235d5d5d%2C%232a623d%2C%231a472a%2C%23FFFFFF%2C%231a472a%2C%232a623d%2C%235d5d5d%2C%232a623d%2C%231a472a%2C%231a472a%2C%232a623d%2C%235d5d5d%2C%232a623d%2C%231a472a%2C%231e1301%2C%23eee117%2C%23e1b723%2C%23906200%2C%23e1b723%2C%23eee117%2C%23FFFFFF%2C%23eee117%2C%23e1b723%2C%23906200%2C%23e1b723%2C%23eee117%2C%23eee117%2C%23e1b723%2C%23906200%2C%23e1b723%2C%23eee117%2C%231e1301&font-family=sport&message=Joseph%2520Noonan%250A%25F0%259F%2590%258D%2520-%252027%2520-%2520%25F0%259F%2590%2580%250ASlytherpuff
+      https://rainbow-text.herokuapp.com/index.html?edit=true&font-size=155px&color-sequence=%231a472a%2C%232a623d%2C%235d5d5d%2C%232a623d%2C%231a472a%2C%23FFFFFF%2C%231a472a%2C%232a623d%2C%235d5d5d%2C%232a623d%2C%231a472a%2C%231a472a%2C%232a623d%2C%235d5d5d%2C%232a623d%2C%231a472a%2C%231e1301%2C%23eee117%2C%23e1b723%2C%23906200%2C%23e1b723%2C%23eee117%2C%23FFFFFF%2C%23eee117%2C%23e1b723%2C%23906200%2C%23e1b723%2C%23eee117%2C%23eee117%2C%23e1b723%2C%23906200%2C%23e1b723%2C%23eee117%2C%231e1301&font-family=sport&message=Joseph%2520Noonan%250A%25F0%259F%2590%258D%2520-%252027%2520-%2520%25F0%259F%2590%2580%250ASlytherpuff
 
 
     # Slytherpuff color insert
@@ -138,10 +138,10 @@ Sample Usage
 
 
   # Chicago Bears
-    https://rainbow-text.herokuapp.com/index.html?font-size=160px&color_sequence=%2303202F%2C%23111111%2C%23DD4814%2C%23DD4814%2C%23111111%2C%2303202F%2C%23FFFFFF%2C%2303202F%2C%23111111%2C%23DD4814%2C%23DD4814%2C%23111111%2C%2303202F&font-family=sport&message=Joseph%2520Noonan%250A%25F0%259F%2590%258D%2520-%252027%2520-%2520%25F0%259F%2590%2580%250AChicago%2520Bears
+    https://rainbow-text.herokuapp.com/index.html?font-size=160px&color-sequence=%2303202F%2C%23111111%2C%23DD4814%2C%23DD4814%2C%23111111%2C%2303202F%2C%23FFFFFF%2C%2303202F%2C%23111111%2C%23DD4814%2C%23DD4814%2C%23111111%2C%2303202F&font-family=sport&message=Joseph%2520Noonan%250A%25F0%259F%2590%258D%2520-%252027%2520-%2520%25F0%259F%2590%2580%250AChicago%2520Bears
 
      # Edit Chicago Bears
-      https://rainbow-text.herokuapp.com/index.html?edit=true&font-size=160px&color_sequence=%2303202F%2C%23111111%2C%23DD4814%2C%23DD4814%2C%23111111%2C%2303202F%2C%23FFFFFF%2C%2303202F%2C%23111111%2C%23DD4814%2C%23DD4814%2C%23111111%2C%2303202F&font-family=sport&message=Joseph%2520Noonan%250A%25F0%259F%2590%258D%2520-%252027%2520-%2520%25F0%259F%2590%2580%250AChicago%2520Bears
+      https://rainbow-text.herokuapp.com/index.html?edit=true&font-size=160px&color-sequence=%2303202F%2C%23111111%2C%23DD4814%2C%23DD4814%2C%23111111%2C%2303202F%2C%23FFFFFF%2C%2303202F%2C%23111111%2C%23DD4814%2C%23DD4814%2C%23111111%2C%2303202F&font-family=sport&message=Joseph%2520Noonan%250A%25F0%259F%2590%258D%2520-%252027%2520-%2520%25F0%259F%2590%2580%250AChicago%2520Bears
 
     # Chicago Bears color insert
       color_sequence = '#DD4814,#03202F,#ae0001,#DD4814,#ae0001,#03202F,#FFFFFF,#03202F,#ae0001,#DD4814,#ae0001,#03202F,#03202F,#ae0001,#DD4814,#ae0001,#03202F,#DD4814'
@@ -167,6 +167,33 @@ Sample Usage
       #DD4814,#DD4814,#DD4814,#DD4814,#DD4814,
       #FFFFFF
 
-
-
       color_sequence = '#03202F,#03202F,#03202F,#FFFFFF,#DD4814,#DD4814,#DD4814,#DD4814,#DD4814,#FFFFFF,#03202F,#03202F,#03202F,#FFFFFF,#DD4814,#DD4814,#DD4814,#DD4814,#DD4814,#FFFFFF,#03202F,#03202F,#03202F,#FFFFFF,#DD4814,#DD4814,#DD4814,#DD4814,#DD4814,#FFFFFF,#03202F,#03202F,#03202F,#FFFFFF,#DD4814,#DD4814,#DD4814,#DD4814,#DD4814'
+
+
+
+
+
+# Chicago White Sox
+  https://rainbow-text.herokuapp.com/index.html?font-size=130px&color-sequence=%23fcfff9%2C%23ffffff&font-family=Copperplate,"Copperplate%20Gothic%20Light"&text-shadow=10&message=Joe%2520Noonan%250A-%252027%2520-%250AChicago%2520White%2520Sox
+
+  # Edit Chicago White Sox
+    https://rainbow-text.herokuapp.com/index.html?edit=true&font-size=130px&color-sequence=%23fcfff9%2C%23ffffff&font-family=Copperplate,"Copperplate%20Gothic%20Light"&text-shadow=10&message=Joe%2520Noonan%250A-%252027%2520-%250AChicago%2520White%2520Sox
+
+
+    # Chicago White Sox colors
+      WHITE HEX CODE: #FFFFFF
+      BLACK COLOR: #000000
+
+
+
+
+
+  # Chicago Cubs
+  BLUE COLOR: #002F6C
+  RED COLOR: #C8102E
+  WHITE HEX CODE: #FFFFFF
+
+
+color_sequence = '#002F6C, #C8102E'
+
+color_sequence = '#002F6C,#002F6C,#002F6C,#FFFFFF, #C8102E, #C8102E, #C8102E, #C8102E, #C8102E,#FFFFFF,#002F6C,#002F6C,#002F6C,#FFFFFF, #C8102E, #C8102E, #C8102E, #C8102E, #C8102E,#FFFFFF,#002F6C,#002F6C,#002F6C,#FFFFFF, #C8102E, #C8102E, #C8102E, #C8102E, #C8102E,#FFFFFF,#002F6C,#002F6C,#002F6C,#FFFFFF, #C8102E, #C8102E, #C8102E, #C8102E, #C8102E'
