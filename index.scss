@@ -156,15 +156,17 @@
       }
     }
 
-    #text-shaddow-wrapper {
+    #text-shadow-wrapper {
       display: flex;
 
-      #text-shaddow-range-wrapper{
+      #text-shadow-range-wrapper{
         flex: 1;
         display: flex;
 
-        #text-shadow-range{
+        #text-shadow-range {
           flex: 1;
+          transform: rotateY(180deg);
+          margin: 0 15px;
         }
       }
     }

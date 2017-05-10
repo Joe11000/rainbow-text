@@ -29,7 +29,7 @@
     colors_str.split(',').forEach( (color) => {
       color_hex = color_hash[color] || color;
 
-      result += `<div class='color-selector' data-class='color-selector'>
+      result += `<div class='color-selector ui-state-default ui-sortable-handle' data-class='color-selector' draggable='true'>
         <input type='color' class='input-color' value='${color_hex}'/>
         <a href='#' class='delete-color-link' data-class='delete-color-link'>
           <img src="delete.png">
@@ -58,6 +58,8 @@
   }
 
   function setTextShadow(val) {
+      debugger;
+
     stopSpinning();
     $("[data-id='colorful-text'] pre").css('text-shadow', `0 0 ${val}px`)
     startSpinning();
@@ -128,7 +130,14 @@
       setURI( {'font-style': this.value });
     });
 
-    $("[data-id='text-shadow-checkbox']").on('input', function() {
+    // font-style listener
+    document.querySelector("[data-id='font-family-selector']").addEventListener('input', function(e){
+      setFontFamily(this.value);
+      setURI( {'font-style': this.value });
+    });
+
+    $("[data-id='text-shadow-checkbox']").on('change', function() {
+      debugger;
       if(this.checked){
         let val = $(this).siblings("[data-id='text-shadow-range']").val()
         setTextShadow(val);
@@ -136,17 +145,19 @@
       else {
         removeTextShadow();
       }
+      setURI( {'text-shadow': undefined } );
+
     });
 
-    $("[data-id='text-shadow-range']").on('change', function() {
+    $("[data-id='text-shadow-range']").on('input', function() {
+      debugger
       if( !isTextShadowChecked()) {
         $("[data-id='text-shadow-checkbox']").prop( 'checked', true );
       }
-
       setTextShadow(this.value);
       setURI( {'text-shadow': this.value} );
     });
-  }
+  };
 
   function getFontSize(){
     return document.querySelector("[data-id='font-size-range']").value + 'px';
@@ -264,11 +275,13 @@
     }
     startSpinning();
 
-    document.querySelector("[data-id='color-selector-wrapper']").innerHTML = createColorSelectors(getColors()) + createColorButton();
+    document.querySelector("[data-id='color-selector-wrapper'] ul").innerHTML = createColorSelectors(getColors()) + createColorButton();
 
     // add color
     $("[data-id='add-color-button']").on('click', function(e) {
-      $("[data-id='add-color-button']").before(createColorSelectors('#000000'))
+      $("[data-id='add-color-button']").before(createColorSelectors('#000000'));
+      updateColorSelectors();
+      setURI();
     });
 
     // change color
@@ -283,6 +296,9 @@
       $(this).parent("[data-class='color-selector']").remove();
       updateColorSelectors();
     });
+
+    $( ".ui-sortable" ).sortable();
+    $( '.ui-sortable' ).disableSelection();
 
     // Clipboard
     var clipboard = new Clipboard('#controls #output-html-wrapper button');

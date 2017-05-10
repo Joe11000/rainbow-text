@@ -106,13 +106,15 @@ body {
     #controls #output-html-wrapper p {
       margin: 0 auto;
       flex: 1; }
-  #controls #text-shaddow-wrapper {
+  #controls #text-shadow-wrapper {
     display: flex; }
-    #controls #text-shaddow-wrapper #text-shaddow-range-wrapper {
+    #controls #text-shadow-wrapper #text-shadow-range-wrapper {
       flex: 1;
       display: flex; }
-      #controls #text-shaddow-wrapper #text-shaddow-range-wrapper #text-shadow-range {
-        flex: 1; }
+      #controls #text-shadow-wrapper #text-shadow-range-wrapper #text-shadow-range {
+        flex: 1;
+        transform: rotateY(180deg);
+        margin: 0 15px; }
   #controls #font-styles-wrapper {
     display: flex;
     margin: 20px auto; }
