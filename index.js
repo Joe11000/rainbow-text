@@ -1,3 +1,4 @@
+// this is not pretty javascript...
 (function() {
 
   const color_hash = {
@@ -175,11 +176,18 @@
       $text.style.WebkitTextFillColor = 'transparent';
     }
 
+    window.is_spinning = false;
     window.startSpinning = function(){
-      window.rainbowIntervalID = setInterval(changeAngle, 50);
+      if(!window.is_spinning) {
+        window.rainbowIntervalID = setInterval(changeAngle, 50);
+        window.is_spinning = true;
+      }
     }
     window.stopSpinning = function(){
-      clearInterval(window.rainbowIntervalID);
+      if(window.is_spinning) {
+        clearInterval(window.rainbowIntervalID);
+        window.is_spinning = false;
+      }
     }
 
       // option 1: no parameters -> make page display text
@@ -277,7 +285,6 @@
         addListenersForEditor();
       }
     }
-
 
     startSpinning();
 
