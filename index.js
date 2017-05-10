@@ -29,12 +29,12 @@
     colors_str.split(',').forEach( (color) => {
       color_hex = color_hash[color] || color;
 
-      result += `<div class='color-selector ui-state-default ui-sortable-handle' data-class='color-selector' draggable='true'>
-        <input type='color' class='input-color' value='${color_hex}'/>
+      result += `<li class='ui-state-default color-selector' data-class='color-selector' draggable='true'>
+        <input type='color' class='input-color' data-class='input-color' value='${color_hex}'/>
         <a href='#' class='delete-color-link' data-class='delete-color-link'>
           <img src="delete.png">
         </a>
-      </div>
+      </li>
       `;
     });
 
@@ -71,7 +71,7 @@
     startSpinning();
   }
 
-  function setURI(args) {
+  function setURI(args=({})) {
     let message = args['message'] || getText();
     let font_size = args['font_size'] || getFontSize();
     let font_family = args['font_family'] || getFontFamily();
@@ -96,14 +96,14 @@
       `&font-family=${font_family.replace(/ /g, '%20')}` +
       text_shadow_sequence_for_uri +
       message_sequence_for_uri;
-
   }
 
   function getText() {
+    debugger
     return document.querySelector("[data-id='colorful-text'] pre").innerHTML;
   }
   function setText(message) {
-    if(message === ''){
+    if(message === '' || message === undefined){
       message = 'Type Message Here';
     }
     document.querySelector("[data-id='colorful-text'] pre").innerHTML = message;
@@ -297,8 +297,21 @@
       updateColorSelectors();
     });
 
-    $( ".ui-sortable" ).sortable();
+    $( '.ui-sortable' ).sortable();
     $( '.ui-sortable' ).disableSelection();
+
+    // when dropping a dragged color, update the url and the color of text
+    $( '.ui-sortable' ).sortable({
+        stop: function( ) {
+            updateColorSelectors();
+            setURI();
+        }
+    });
+
+    $("[data-id='color-selector-wrapper']").on('change', "[data-class='input-color']", function(){
+      setURI();
+      updateColorSelectors();
+    });
 
     // Clipboard
     var clipboard = new Clipboard('#controls #output-html-wrapper button');
