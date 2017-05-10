@@ -6,10 +6,10 @@ New Feature: Add a url param "edit=true" before the message='...' param in the u
 
 Sample Usage
   # TYT
-    https://rainbow-text.herokuapp.com/index.html?font-size=118px&font-family=fantasy&message=%25F0%259F%2590%25BA%2520%2520%2520TYT%2520%2520%2520%25F0%259F%2590%25BA%250AIs%250AToo%250A%25F0%259F%2590%25BE%2520%2520Strong%2520%2520%25F0%259F%2590%25BE
+    https://rainbow-text.herokuapp.com/index.html?font-size=118px&font-family=fantasy&text-shadow=10&message=%25F0%259F%2590%25BA%2520%2520%2520TYT%2520%2520%2520%25F0%259F%2590%25BA%250AIs%250AToo%250A%25F0%259F%2590%25BE%2520%2520Strong%2520%2520%25F0%259F%2590%25BE
 
   # Edit TYT Message
-    https://rainbow-text.herokuapp.com/index.html?edit=true&font-size=118px&font-family=fantasy&message=%25F0%259F%2590%25BA%2520%2520%2520TYT%2520%2520%2520%25F0%259F%2590%25BA%250AIs%250AToo%250A%25F0%259F%2590%25BE%2520%2520Strong%2520%2520%25F0%259F%2590%25BE
+     https://rainbow-text.herokuapp.com/index.html?edit=true&font-size=118px&font-family=fantasy&text-shadow=10&message=%25F0%259F%2590%25BA%2520%2520%2520TYT%2520%2520%2520%25F0%259F%2590%25BA%250AIs%250AToo%250A%25F0%259F%2590%25BE%2520%2520Strong%2520%2520%25F0%259F%2590%25BE
 
 
 

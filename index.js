@@ -71,7 +71,6 @@
   }
 
   function setURI(args=({})) {
-    debugger
 
     let message = args['message'] || getText();
     let font_size = args['font-size'] || getFontSize();
@@ -192,7 +191,6 @@
 
       // option 1: no parameters -> make page display text
     if(document.location.search === '') {
-      debugger
       // show page specific
       document.querySelector("[data-id='controls']").style.display = 'block';
       addListenersForEditor();
