@@ -19,7 +19,7 @@
   <div data-id='controls' id='controls'>
     <textarea focus placeholder='Type Message Here'></textarea>
 
-      <div class='color-selector-wrapper' data-id='color-selector-wrapper'>
+    <div class='color-selector-wrapper' data-id='color-selector-wrapper'>
       </div>
 
 
@@ -50,10 +50,17 @@
       </select>
     </div>
 
+    <div id='text-shadow-wrapper'>
+      <div id='text-shadow-range-wrapper'>
+        <input type="checkbox" data-id='text-shadow-checkbox'>
+        <label for='text-shadow-range'>Text Shadow size:</label>
+        <input id='text-shadow-range' data-id='text-shadow-range' value='10' type='range' min='0' max='60'>
+      </div>
+    </div>
+
     <div id='output-html-wrapper' data-id='output-html-wrapper'>
       <div id='button-wrapper'>
         <button data-clipboard-target="[data-id='output-html']"> Copy URL: </button>
-
       </div>
 
       <p id='output-html' data-id='output-html'></p>

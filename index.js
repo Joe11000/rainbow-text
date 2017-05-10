@@ -12,7 +12,6 @@
   window.default_color_sequence = "#FF0000,#FFA500,#FFFF00,#00FF00,#0000FF,#4B0082,#FF0000,#FFA500,#FFFF00,#00FF00,#0000FF,#4B0082";
 
   function updateColorSelectors(){
-    debugger
     result = $("[data-class='color-selector'] input").toArray().map(function(color_input){
       return color_input.value
     }).join(',')
@@ -42,22 +41,42 @@
     return result;
   }
 
-  function createColorButton(){
+  function createColorButton() {
     return `<button class='add-color-button' data-id='add-color-button'/>&#10133;</button>`;
   }
 
-  function getColors(){
+  function getColors() {
     return window.color_sequence.replace(/ /g, '');
   }
 
-  function setURI(args){
+  function isTextShadowChecked() {
+    $("[data-id='text-shadow-checkbox']:checked").length == 1
+  }
+
+  function getTextShadow() {
+    return $("[data-id='text-shadow-range']").val();
+  }
+
+  function setTextShadow(val) {
+    stopSpinning();
+    $("[data-id='colorful-text'] pre").css('text-shadow', `0 0 ${val}px`)
+    startSpinning();
+  }
+
+  function removeTextShadow(val) {
+    stopSpinning();
+    $("[data-id='colorful-text'] pre").css('text-shadow', '')
+    startSpinning();
+  }
+
+  function setURI(args) {
     let message = args['message'] || getText();
     let font_size = args['font_size'] || getFontSize();
     let font_family = args['font_family'] || getFontFamily();
     let colors = args['colors'] || getColors();
+    let text_shadow = args['text_shadow'] || getTextShadow();
 
-
-    if(button_text_changed){
+    if(button_text_changed) {
       document.querySelector('#controls #output-html-wrapper button').innerHTML = " Copy URL: ";
     }
 
@@ -67,9 +86,14 @@
       color_sequence_for_uri = `&color_sequence=${encodeURIComponent(colors)}`;
     }
 
+    let text_shadow_sequence_for_uri = isTextShadowChecked() ? `&text_shadow=${getTextShadow()}` : '';
     let message_sequence_for_uri = `&message=${encodeURIComponent(encodeURIComponent(message))}`;
+
     document.querySelector("[data-id='output-html']").innerHTML = document.location.origin + document.location.pathname +
-      `?font-size=${font_size}` + color_sequence_for_uri + `&font-family=${font_family.replace(/ /g, '%20')}` + message_sequence_for_uri;
+      `?font-size=${font_size}` + color_sequence_for_uri +
+      `&font-family=${font_family.replace(/ /g, '%20')}` +
+      text_shadow_sequence_for_uri +
+      message_sequence_for_uri;
 
   }
 
@@ -103,6 +127,25 @@
       setFontFamily(this.value);
       setURI( {'font-style': this.value });
     });
+
+    $("[data-id='text-shadow-checkbox']").on('input', function() {
+      if(this.checked){
+        let val = $(this).siblings("[data-id='text-shadow-range']").val()
+        setTextShadow(val);
+      }
+      else {
+        removeTextShadow();
+      }
+    });
+
+    $("[data-id='text-shadow-range']").on('change', function() {
+      if( !isTextShadowChecked()) {
+        $("[data-id='text-shadow-checkbox']").prop( 'checked', true );
+      }
+
+      setTextShadow(this.value);
+      setURI( {'text-shadow': this.value} );
+    });
   }
 
   function getFontSize(){
@@ -130,7 +173,7 @@
       window.color_sequence = window.default_color_sequence;
     }
 
-    // option 2: all parameters except no url param "edit=true"
+  // option 2: all parameters except no url param "edit=true"
     else
     {
       // edit page specific
@@ -163,6 +206,14 @@
         window.color_sequence = default_color_sequence;
       }
 
+      // get text-shadow from url
+      var text_shadow = '';
+      try{
+        text_shadow = uri.match(/[&?]?text-shadow=([^&]*)&/)[1];
+        $("[data-id='text-shadow-checkbox']").prop( 'checked', true );
+        $("[data-id='text-shadow-range']").val(text_shadow)
+      }catch(e){}
+
       // get message from url
       var message = '';
       try{
@@ -184,7 +235,7 @@
         edit_existing = false;
       }
 
-      setURI( { 'message': message, 'font_size': font_size, 'font_family': font_family, 'colors': window.color_sequence } );
+      setURI( { 'message': message, 'text_shadow': text_shadow, 'font_size': font_size, 'font_family': font_family, 'colors': window.color_sequence } );
 
       // option 3: all parameters and url param "edit=true" ->
       if(edit_existing) // add default edit_existing
