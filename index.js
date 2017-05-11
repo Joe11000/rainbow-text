@@ -91,11 +91,27 @@
     let text_shadow_sequence_for_uri = isTextShadowChecked() ? `&text-shadow=${getTextShadow()}` : '';
     let message_sequence_for_uri = `&message=${encodeURIComponent(encodeURIComponent(message))}`;
 
-    document.querySelector("[data-id='output-html']").innerHTML = document.location.origin + document.location.pathname +
+    let output = document.location.origin + document.location.pathname +
       `?font-size=${font_size}` + color_sequence_for_uri +
       `&font-family=${font_family.replace(/ /g, '%20')}` +
       text_shadow_sequence_for_uri +
       message_sequence_for_uri;
+
+    document.querySelector("[data-id='output-html']").innerHTML = output;
+    debugger
+    if(output.length > 2000 ){
+      $("[data-id='output-html']").css('color', 'red')
+      $("[data-id='output-html']").prop('title', `URL IS ${output.length - 2000} characters too long. Internet URLs are not guarenteed to work if they exceed 2000 characters. Proceed at your own risk.`)
+    }
+    else if(output.length >= 1800 ) {
+      $("[data-id='output-html']").css('color', 'orange')
+      $("[data-id='output-html']").prop('title', `Only ${2000 - output.length} more characters allowed in the url.`)
+    }
+    else {
+      $("[data-id='output-html']").css('color', 'white')
+      $("[data-id='output-html']").prop('title', `At ${output.length} characters. Only 2000 allowed safely in urls.`)
+
+    }
   }
 
   function getText() {
